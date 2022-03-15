@@ -109,24 +109,24 @@ namespace warehouse_storage_system
             this.suppliersGridView = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.clientPhoneTextBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.clientWebsiteTextBox = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.clientFaxTextBox = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.clientEmailTextBox = new System.Windows.Forms.TextBox();
+            this.clientDeleteBtn = new System.Windows.Forms.Button();
+            this.clientUpdateBtn = new System.Windows.Forms.Button();
+            this.clientInsertBtn = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.clientMobTextBox = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.clientIDTextBox = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.clientNameTextBox = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.clientsGridView = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
@@ -188,6 +188,9 @@ namespace warehouse_storage_system
             this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROD_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expire_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).BeginInit();
@@ -202,7 +205,7 @@ namespace warehouse_storage_system
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -574,9 +577,13 @@ namespace warehouse_storage_system
             // productsGridView_p
             // 
             this.productsGridView_p.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsGridView_p.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PROD_id,
+            this.prod_namee,
+            this.expire_period});
             this.productsGridView_p.Location = new System.Drawing.Point(18, 36);
             this.productsGridView_p.Name = "productsGridView_p";
-            this.productsGridView_p.Size = new System.Drawing.Size(240, 211);
+            this.productsGridView_p.Size = new System.Drawing.Size(294, 211);
             this.productsGridView_p.TabIndex = 14;
             // 
             // insertProductBtn
@@ -933,6 +940,7 @@ namespace warehouse_storage_system
             // 
             // supIDTextBox
             // 
+            this.supIDTextBox.Enabled = false;
             this.supIDTextBox.Location = new System.Drawing.Point(342, 110);
             this.supIDTextBox.Name = "supIDTextBox";
             this.supIDTextBox.Size = new System.Drawing.Size(120, 20);
@@ -980,24 +988,24 @@ namespace warehouse_storage_system
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.textBox7);
+            this.tabPage4.Controls.Add(this.clientPhoneTextBox);
             this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.textBox8);
+            this.tabPage4.Controls.Add(this.clientWebsiteTextBox);
             this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.textBox10);
+            this.tabPage4.Controls.Add(this.clientFaxTextBox);
             this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.textBox11);
-            this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.clientEmailTextBox);
+            this.tabPage4.Controls.Add(this.clientDeleteBtn);
+            this.tabPage4.Controls.Add(this.clientUpdateBtn);
+            this.tabPage4.Controls.Add(this.clientInsertBtn);
             this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.textBox12);
+            this.tabPage4.Controls.Add(this.clientMobTextBox);
             this.tabPage4.Controls.Add(this.label36);
-            this.tabPage4.Controls.Add(this.textBox13);
+            this.tabPage4.Controls.Add(this.clientIDTextBox);
             this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.textBox14);
+            this.tabPage4.Controls.Add(this.clientNameTextBox);
             this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Controls.Add(this.clientsGridView);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1015,12 +1023,12 @@ namespace warehouse_storage_system
             this.label30.TabIndex = 60;
             this.label30.Text = "phone";
             // 
-            // textBox7
+            // clientPhoneTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(342, 198);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(120, 20);
-            this.textBox7.TabIndex = 59;
+            this.clientPhoneTextBox.Location = new System.Drawing.Point(342, 198);
+            this.clientPhoneTextBox.Name = "clientPhoneTextBox";
+            this.clientPhoneTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientPhoneTextBox.TabIndex = 59;
             // 
             // label31
             // 
@@ -1031,12 +1039,12 @@ namespace warehouse_storage_system
             this.label31.TabIndex = 58;
             this.label31.Text = "website";
             // 
-            // textBox8
+            // clientWebsiteTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(482, 152);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(120, 20);
-            this.textBox8.TabIndex = 57;
+            this.clientWebsiteTextBox.Location = new System.Drawing.Point(482, 152);
+            this.clientWebsiteTextBox.Name = "clientWebsiteTextBox";
+            this.clientWebsiteTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientWebsiteTextBox.TabIndex = 57;
             // 
             // label33
             // 
@@ -1047,12 +1055,12 @@ namespace warehouse_storage_system
             this.label33.TabIndex = 56;
             this.label33.Text = "fax";
             // 
-            // textBox10
+            // clientFaxTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(482, 110);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(120, 20);
-            this.textBox10.TabIndex = 55;
+            this.clientFaxTextBox.Location = new System.Drawing.Point(482, 110);
+            this.clientFaxTextBox.Name = "clientFaxTextBox";
+            this.clientFaxTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientFaxTextBox.TabIndex = 55;
             // 
             // label34
             // 
@@ -1063,39 +1071,42 @@ namespace warehouse_storage_system
             this.label34.TabIndex = 54;
             this.label34.Text = "email";
             // 
-            // textBox11
+            // clientEmailTextBox
             // 
-            this.textBox11.Location = new System.Drawing.Point(482, 65);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(120, 20);
-            this.textBox11.TabIndex = 53;
+            this.clientEmailTextBox.Location = new System.Drawing.Point(482, 65);
+            this.clientEmailTextBox.Name = "clientEmailTextBox";
+            this.clientEmailTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientEmailTextBox.TabIndex = 53;
             // 
-            // button1
+            // clientDeleteBtn
             // 
-            this.button1.Location = new System.Drawing.Point(342, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.clientDeleteBtn.Location = new System.Drawing.Point(342, 285);
+            this.clientDeleteBtn.Name = "clientDeleteBtn";
+            this.clientDeleteBtn.Size = new System.Drawing.Size(98, 23);
+            this.clientDeleteBtn.TabIndex = 52;
+            this.clientDeleteBtn.Text = "delete";
+            this.clientDeleteBtn.UseVisualStyleBackColor = true;
+            this.clientDeleteBtn.Click += new System.EventHandler(this.clientDeleteBtn_Click);
             // 
-            // button2
+            // clientUpdateBtn
             // 
-            this.button2.Location = new System.Drawing.Point(222, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clientUpdateBtn.Location = new System.Drawing.Point(222, 285);
+            this.clientUpdateBtn.Name = "clientUpdateBtn";
+            this.clientUpdateBtn.Size = new System.Drawing.Size(98, 23);
+            this.clientUpdateBtn.TabIndex = 51;
+            this.clientUpdateBtn.Text = "update";
+            this.clientUpdateBtn.UseVisualStyleBackColor = true;
+            this.clientUpdateBtn.Click += new System.EventHandler(this.clientUpdateBtn_Click);
             // 
-            // button4
+            // clientInsertBtn
             // 
-            this.button4.Location = new System.Drawing.Point(94, 285);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 23);
-            this.button4.TabIndex = 50;
-            this.button4.Text = "insert";
-            this.button4.UseVisualStyleBackColor = true;
+            this.clientInsertBtn.Location = new System.Drawing.Point(94, 285);
+            this.clientInsertBtn.Name = "clientInsertBtn";
+            this.clientInsertBtn.Size = new System.Drawing.Size(98, 23);
+            this.clientInsertBtn.TabIndex = 50;
+            this.clientInsertBtn.Text = "insert";
+            this.clientInsertBtn.UseVisualStyleBackColor = true;
+            this.clientInsertBtn.Click += new System.EventHandler(this.clientInsertBtn_Click);
             // 
             // label35
             // 
@@ -1106,12 +1117,12 @@ namespace warehouse_storage_system
             this.label35.TabIndex = 49;
             this.label35.Text = "mobile";
             // 
-            // textBox12
+            // clientMobTextBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(342, 152);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(120, 20);
-            this.textBox12.TabIndex = 48;
+            this.clientMobTextBox.Location = new System.Drawing.Point(342, 152);
+            this.clientMobTextBox.Name = "clientMobTextBox";
+            this.clientMobTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientMobTextBox.TabIndex = 48;
             // 
             // label36
             // 
@@ -1122,12 +1133,13 @@ namespace warehouse_storage_system
             this.label36.TabIndex = 47;
             this.label36.Text = "ID";
             // 
-            // textBox13
+            // clientIDTextBox
             // 
-            this.textBox13.Location = new System.Drawing.Point(342, 110);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(120, 20);
-            this.textBox13.TabIndex = 46;
+            this.clientIDTextBox.Enabled = false;
+            this.clientIDTextBox.Location = new System.Drawing.Point(342, 110);
+            this.clientIDTextBox.Name = "clientIDTextBox";
+            this.clientIDTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientIDTextBox.TabIndex = 46;
             // 
             // label37
             // 
@@ -1138,12 +1150,12 @@ namespace warehouse_storage_system
             this.label37.TabIndex = 45;
             this.label37.Text = "name";
             // 
-            // textBox14
+            // clientNameTextBox
             // 
-            this.textBox14.Location = new System.Drawing.Point(342, 65);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(120, 20);
-            this.textBox14.TabIndex = 44;
+            this.clientNameTextBox.Location = new System.Drawing.Point(342, 65);
+            this.clientNameTextBox.Name = "clientNameTextBox";
+            this.clientNameTextBox.Size = new System.Drawing.Size(120, 20);
+            this.clientNameTextBox.TabIndex = 44;
             // 
             // label38
             // 
@@ -1155,17 +1167,18 @@ namespace warehouse_storage_system
             this.label38.TabIndex = 43;
             this.label38.Text = "Clients:";
             // 
-            // dataGridView2
+            // clientsGridView
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.client_ID,
             this.client_Name,
             this.client_phone});
-            this.dataGridView2.Location = new System.Drawing.Point(66, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(270, 211);
-            this.dataGridView2.TabIndex = 42;
+            this.clientsGridView.Location = new System.Drawing.Point(66, 42);
+            this.clientsGridView.Name = "clientsGridView";
+            this.clientsGridView.Size = new System.Drawing.Size(270, 211);
+            this.clientsGridView.TabIndex = 42;
+            this.clientsGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientsGridView_RowHeaderMouseClick);
             // 
             // tabPage5
             // 
@@ -1694,6 +1707,7 @@ namespace warehouse_storage_system
             // 
             this.client_ID.HeaderText = "ID";
             this.client_ID.Name = "client_ID";
+            this.client_ID.Width = 50;
             // 
             // client_Name
             // 
@@ -1704,6 +1718,23 @@ namespace warehouse_storage_system
             // 
             this.client_phone.HeaderText = "Phone";
             this.client_phone.Name = "client_phone";
+            this.client_phone.Width = 80;
+            // 
+            // PROD_id
+            // 
+            this.PROD_id.HeaderText = "ID";
+            this.PROD_id.Name = "PROD_id";
+            this.PROD_id.Width = 50;
+            // 
+            // prod_namee
+            // 
+            this.prod_namee.HeaderText = "name";
+            this.prod_namee.Name = "prod_namee";
+            // 
+            // expire_period
+            // 
+            this.expire_period.HeaderText = "expire period";
+            this.expire_period.Name = "expire_period";
             // 
             // MainApp
             // 
@@ -1733,7 +1764,7 @@ namespace warehouse_storage_system
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
@@ -1827,24 +1858,24 @@ namespace warehouse_storage_system
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DataGridView suppliersGridView;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox clientPhoneTextBox;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox clientWebsiteTextBox;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox clientFaxTextBox;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox clientEmailTextBox;
+        private System.Windows.Forms.Button clientDeleteBtn;
+        private System.Windows.Forms.Button clientUpdateBtn;
+        private System.Windows.Forms.Button clientInsertBtn;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox clientMobTextBox;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox clientIDTextBox;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox clientNameTextBox;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView clientsGridView;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Label label47;
@@ -1908,6 +1939,9 @@ namespace warehouse_storage_system
         private System.Windows.Forms.DataGridViewTextBoxColumn client_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn client_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn client_phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROD_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prod_namee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expire_period;
     }
 }
 
