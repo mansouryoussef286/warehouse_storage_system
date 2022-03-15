@@ -44,16 +44,19 @@ namespace warehouse_storage_system
             this.insertStoreBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.storesGridView = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keeper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.prodProductionDateComboBox = new System.Windows.Forms.ComboBox();
             this.deleteProductBtn = new System.Windows.Forms.Button();
             this.updateProductBtn = new System.Windows.Forms.Button();
             this.prodStoreComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.prodQuantityTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.prodProdDateTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.prodExpPerTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,24 +89,24 @@ namespace warehouse_storage_system
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.supPhoneTextBox = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.supWebsiteTextBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.supFaxTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.supEmailTextBox = new System.Windows.Forms.TextBox();
+            this.supDeleteBtn = new System.Windows.Forms.Button();
+            this.supUpdateBtn = new System.Windows.Forms.Button();
+            this.supInsertBtn = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.supMobTextBox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.supIDTextBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.supNameTextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.suppliersGridView = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -149,12 +152,6 @@ namespace warehouse_storage_system
             this.label46 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -176,6 +173,21 @@ namespace warehouse_storage_system
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prod_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.store = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).BeginInit();
@@ -188,7 +200,7 @@ namespace warehouse_storage_system
             ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -196,8 +208,8 @@ namespace warehouse_storage_system
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage10.SuspendLayout();
-            this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -240,7 +252,7 @@ namespace warehouse_storage_system
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(308, 170);
+            this.label5.Location = new System.Drawing.Point(338, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 12;
@@ -248,7 +260,7 @@ namespace warehouse_storage_system
             // 
             // storeKeeperTextBox
             // 
-            this.storeKeeperTextBox.Location = new System.Drawing.Point(308, 189);
+            this.storeKeeperTextBox.Location = new System.Drawing.Point(338, 203);
             this.storeKeeperTextBox.Name = "storeKeeperTextBox";
             this.storeKeeperTextBox.Size = new System.Drawing.Size(120, 20);
             this.storeKeeperTextBox.TabIndex = 11;
@@ -256,7 +268,7 @@ namespace warehouse_storage_system
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 106);
+            this.label4.Location = new System.Drawing.Point(338, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 10;
@@ -264,7 +276,7 @@ namespace warehouse_storage_system
             // 
             // storeAddressTextBox
             // 
-            this.storeAddressTextBox.Location = new System.Drawing.Point(308, 125);
+            this.storeAddressTextBox.Location = new System.Drawing.Point(338, 139);
             this.storeAddressTextBox.Name = "storeAddressTextBox";
             this.storeAddressTextBox.Size = new System.Drawing.Size(120, 20);
             this.storeAddressTextBox.TabIndex = 9;
@@ -272,7 +284,7 @@ namespace warehouse_storage_system
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 45);
+            this.label3.Location = new System.Drawing.Point(338, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 8;
@@ -280,7 +292,7 @@ namespace warehouse_storage_system
             // 
             // storeNameTextBox
             // 
-            this.storeNameTextBox.Location = new System.Drawing.Point(308, 64);
+            this.storeNameTextBox.Location = new System.Drawing.Point(338, 78);
             this.storeNameTextBox.Name = "storeNameTextBox";
             this.storeNameTextBox.Size = new System.Drawing.Size(120, 20);
             this.storeNameTextBox.TabIndex = 7;
@@ -298,9 +310,13 @@ namespace warehouse_storage_system
             // productsGridView_s
             // 
             this.productsGridView_s.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsGridView_s.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Prod_name,
+            this.store});
             this.productsGridView_s.Location = new System.Drawing.Point(475, 41);
             this.productsGridView_s.Name = "productsGridView_s";
-            this.productsGridView_s.Size = new System.Drawing.Size(240, 211);
+            this.productsGridView_s.Size = new System.Drawing.Size(245, 211);
             this.productsGridView_s.TabIndex = 5;
             // 
             // deleteStoreBtn
@@ -321,6 +337,7 @@ namespace warehouse_storage_system
             this.updateStoreBtn.TabIndex = 3;
             this.updateStoreBtn.Text = "update store";
             this.updateStoreBtn.UseVisualStyleBackColor = true;
+            this.updateStoreBtn.Click += new System.EventHandler(this.updateStoreBtn_Click);
             // 
             // insertStoreBtn
             // 
@@ -330,6 +347,7 @@ namespace warehouse_storage_system
             this.insertStoreBtn.TabIndex = 2;
             this.insertStoreBtn.Text = "insert store";
             this.insertStoreBtn.UseVisualStyleBackColor = true;
+            this.insertStoreBtn.Click += new System.EventHandler(this.insertStoreBtn_Click);
             // 
             // label1
             // 
@@ -343,11 +361,41 @@ namespace warehouse_storage_system
             // 
             // storesGridView
             // 
+            this.storesGridView.AllowUserToAddRows = false;
+            this.storesGridView.AllowUserToDeleteRows = false;
             this.storesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.storesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.address,
+            this.keeper});
             this.storesGridView.Location = new System.Drawing.Point(32, 41);
             this.storesGridView.Name = "storesGridView";
-            this.storesGridView.Size = new System.Drawing.Size(240, 211);
+            this.storesGridView.ReadOnly = true;
+            this.storesGridView.Size = new System.Drawing.Size(300, 211);
             this.storesGridView.TabIndex = 0;
+            this.storesGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.storesGridView_RowHeaderMouseClick);
+            // 
+            // name
+            // 
+            this.name.HeaderText = "name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.name.Width = 50;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "address";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
+            // keeper
+            // 
+            this.keeper.HeaderText = "keeper";
+            this.keeper.Name = "keeper";
+            this.keeper.ReadOnly = true;
+            this.keeper.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.keeper.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabPage2
             // 
@@ -372,13 +420,13 @@ namespace warehouse_storage_system
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.prodProductionDateComboBox);
             this.tabPage7.Controls.Add(this.deleteProductBtn);
             this.tabPage7.Controls.Add(this.updateProductBtn);
             this.tabPage7.Controls.Add(this.prodStoreComboBox);
             this.tabPage7.Controls.Add(this.label12);
             this.tabPage7.Controls.Add(this.prodQuantityTextBox);
             this.tabPage7.Controls.Add(this.label10);
-            this.tabPage7.Controls.Add(this.prodProdDateTextBox);
             this.tabPage7.Controls.Add(this.label11);
             this.tabPage7.Controls.Add(this.prodExpPerTextBox);
             this.tabPage7.Controls.Add(this.label6);
@@ -396,6 +444,14 @@ namespace warehouse_storage_system
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Update product";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // prodProductionDateComboBox
+            // 
+            this.prodProductionDateComboBox.FormattingEnabled = true;
+            this.prodProductionDateComboBox.Location = new System.Drawing.Point(405, 127);
+            this.prodProductionDateComboBox.Name = "prodProductionDateComboBox";
+            this.prodProductionDateComboBox.Size = new System.Drawing.Size(55, 21);
+            this.prodProductionDateComboBox.TabIndex = 31;
             // 
             // deleteProductBtn
             // 
@@ -426,7 +482,7 @@ namespace warehouse_storage_system
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(402, 111);
+            this.label12.Location = new System.Drawing.Point(337, 188);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 27;
@@ -434,26 +490,19 @@ namespace warehouse_storage_system
             // 
             // prodQuantityTextBox
             // 
-            this.prodQuantityTextBox.Location = new System.Drawing.Point(405, 127);
+            this.prodQuantityTextBox.Location = new System.Drawing.Point(340, 204);
             this.prodQuantityTextBox.Name = "prodQuantityTextBox";
-            this.prodQuantityTextBox.Size = new System.Drawing.Size(55, 20);
+            this.prodQuantityTextBox.Size = new System.Drawing.Size(120, 20);
             this.prodQuantityTextBox.TabIndex = 26;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(337, 185);
+            this.label10.Location = new System.Drawing.Point(402, 114);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 25;
-            this.label10.Text = "production date";
-            // 
-            // prodProdDateTextBox
-            // 
-            this.prodProdDateTextBox.Location = new System.Drawing.Point(340, 201);
-            this.prodProdDateTextBox.Name = "prodProdDateTextBox";
-            this.prodProdDateTextBox.Size = new System.Drawing.Size(120, 20);
-            this.prodProdDateTextBox.TabIndex = 24;
+            this.label10.Text = "prod. date";
             // 
             // label11
             // 
@@ -737,24 +786,24 @@ namespace warehouse_storage_system
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.textBox9);
+            this.tabPage3.Controls.Add(this.supPhoneTextBox);
             this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.supWebsiteTextBox);
             this.tabPage3.Controls.Add(this.label28);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.supFaxTextBox);
             this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.textBox6);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.supEmailTextBox);
+            this.tabPage3.Controls.Add(this.supDeleteBtn);
+            this.tabPage3.Controls.Add(this.supUpdateBtn);
+            this.tabPage3.Controls.Add(this.supInsertBtn);
             this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.supMobTextBox);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.supIDTextBox);
             this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.supNameTextBox);
             this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.suppliersGridView);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -772,12 +821,12 @@ namespace warehouse_storage_system
             this.label32.TabIndex = 41;
             this.label32.Text = "phone";
             // 
-            // textBox9
+            // supPhoneTextBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(342, 198);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(120, 20);
-            this.textBox9.TabIndex = 40;
+            this.supPhoneTextBox.Location = new System.Drawing.Point(342, 198);
+            this.supPhoneTextBox.Name = "supPhoneTextBox";
+            this.supPhoneTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supPhoneTextBox.TabIndex = 40;
             // 
             // label27
             // 
@@ -788,12 +837,12 @@ namespace warehouse_storage_system
             this.label27.TabIndex = 39;
             this.label27.Text = "website";
             // 
-            // textBox4
+            // supWebsiteTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(482, 152);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 20);
-            this.textBox4.TabIndex = 38;
+            this.supWebsiteTextBox.Location = new System.Drawing.Point(482, 152);
+            this.supWebsiteTextBox.Name = "supWebsiteTextBox";
+            this.supWebsiteTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supWebsiteTextBox.TabIndex = 38;
             // 
             // label28
             // 
@@ -804,12 +853,12 @@ namespace warehouse_storage_system
             this.label28.TabIndex = 37;
             this.label28.Text = "fax";
             // 
-            // textBox5
+            // supFaxTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(482, 110);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 20);
-            this.textBox5.TabIndex = 36;
+            this.supFaxTextBox.Location = new System.Drawing.Point(482, 110);
+            this.supFaxTextBox.Name = "supFaxTextBox";
+            this.supFaxTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supFaxTextBox.TabIndex = 36;
             // 
             // label29
             // 
@@ -820,39 +869,42 @@ namespace warehouse_storage_system
             this.label29.TabIndex = 35;
             this.label29.Text = "email";
             // 
-            // textBox6
+            // supEmailTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(482, 65);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(120, 20);
-            this.textBox6.TabIndex = 34;
+            this.supEmailTextBox.Location = new System.Drawing.Point(482, 65);
+            this.supEmailTextBox.Name = "supEmailTextBox";
+            this.supEmailTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supEmailTextBox.TabIndex = 34;
             // 
-            // button5
+            // supDeleteBtn
             // 
-            this.button5.Location = new System.Drawing.Point(342, 285);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 23);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "delete";
-            this.button5.UseVisualStyleBackColor = true;
+            this.supDeleteBtn.Location = new System.Drawing.Point(342, 285);
+            this.supDeleteBtn.Name = "supDeleteBtn";
+            this.supDeleteBtn.Size = new System.Drawing.Size(98, 23);
+            this.supDeleteBtn.TabIndex = 33;
+            this.supDeleteBtn.Text = "delete";
+            this.supDeleteBtn.UseVisualStyleBackColor = true;
+            this.supDeleteBtn.Click += new System.EventHandler(this.supDeleteBtn_Click);
             // 
-            // button6
+            // supUpdateBtn
             // 
-            this.button6.Location = new System.Drawing.Point(222, 285);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 23);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "update";
-            this.button6.UseVisualStyleBackColor = true;
+            this.supUpdateBtn.Location = new System.Drawing.Point(222, 285);
+            this.supUpdateBtn.Name = "supUpdateBtn";
+            this.supUpdateBtn.Size = new System.Drawing.Size(98, 23);
+            this.supUpdateBtn.TabIndex = 32;
+            this.supUpdateBtn.Text = "update";
+            this.supUpdateBtn.UseVisualStyleBackColor = true;
+            this.supUpdateBtn.Click += new System.EventHandler(this.supUpdateBtn_Click);
             // 
-            // button7
+            // supInsertBtn
             // 
-            this.button7.Location = new System.Drawing.Point(94, 285);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 23);
-            this.button7.TabIndex = 31;
-            this.button7.Text = "insert";
-            this.button7.UseVisualStyleBackColor = true;
+            this.supInsertBtn.Location = new System.Drawing.Point(94, 285);
+            this.supInsertBtn.Name = "supInsertBtn";
+            this.supInsertBtn.Size = new System.Drawing.Size(98, 23);
+            this.supInsertBtn.TabIndex = 31;
+            this.supInsertBtn.Text = "insert";
+            this.supInsertBtn.UseVisualStyleBackColor = true;
+            this.supInsertBtn.Click += new System.EventHandler(this.supInsertBtn_Click);
             // 
             // label23
             // 
@@ -863,12 +915,12 @@ namespace warehouse_storage_system
             this.label23.TabIndex = 23;
             this.label23.Text = "mobile";
             // 
-            // textBox1
+            // supMobTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(342, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 22;
+            this.supMobTextBox.Location = new System.Drawing.Point(342, 152);
+            this.supMobTextBox.Name = "supMobTextBox";
+            this.supMobTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supMobTextBox.TabIndex = 22;
             // 
             // label24
             // 
@@ -879,12 +931,12 @@ namespace warehouse_storage_system
             this.label24.TabIndex = 21;
             this.label24.Text = "ID";
             // 
-            // textBox2
+            // supIDTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(342, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 20;
+            this.supIDTextBox.Location = new System.Drawing.Point(342, 110);
+            this.supIDTextBox.Name = "supIDTextBox";
+            this.supIDTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supIDTextBox.TabIndex = 20;
             // 
             // label25
             // 
@@ -895,12 +947,12 @@ namespace warehouse_storage_system
             this.label25.TabIndex = 19;
             this.label25.Text = "name";
             // 
-            // textBox3
+            // supNameTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(342, 65);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 20);
-            this.textBox3.TabIndex = 18;
+            this.supNameTextBox.Location = new System.Drawing.Point(342, 65);
+            this.supNameTextBox.Name = "supNameTextBox";
+            this.supNameTextBox.Size = new System.Drawing.Size(120, 20);
+            this.supNameTextBox.TabIndex = 18;
             // 
             // label26
             // 
@@ -912,13 +964,18 @@ namespace warehouse_storage_system
             this.label26.TabIndex = 14;
             this.label26.Text = "Suppliers:";
             // 
-            // dataGridView1
+            // suppliersGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 211);
-            this.dataGridView1.TabIndex = 13;
+            this.suppliersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.suppliersGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sup_ID,
+            this.sup_Name,
+            this.sup_Phone});
+            this.suppliersGridView.Location = new System.Drawing.Point(66, 42);
+            this.suppliersGridView.Name = "suppliersGridView";
+            this.suppliersGridView.Size = new System.Drawing.Size(270, 211);
+            this.suppliersGridView.TabIndex = 13;
+            this.suppliersGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.suppliersGridView_RowHeaderMouseClick);
             // 
             // tabPage4
             // 
@@ -1101,9 +1158,13 @@ namespace warehouse_storage_system
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.client_ID,
+            this.client_Name,
+            this.client_phone});
             this.dataGridView2.Location = new System.Drawing.Point(66, 42);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 211);
+            this.dataGridView2.Size = new System.Drawing.Size(270, 211);
             this.dataGridView2.TabIndex = 42;
             // 
             // tabPage5
@@ -1362,66 +1423,6 @@ namespace warehouse_storage_system
             this.tabPage10.Text = "outgoing requests";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.button12);
-            this.tabPage6.Controls.Add(this.button11);
-            this.tabPage6.Controls.Add(this.button10);
-            this.tabPage6.Controls.Add(this.button9);
-            this.tabPage6.Controls.Add(this.button8);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(748, 320);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Reports";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(180, 245);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(180, 204);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(180, 160);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(180, 121);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(180, 76);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -1595,6 +1596,115 @@ namespace warehouse_storage_system
             this.dataGridView4.Size = new System.Drawing.Size(240, 211);
             this.dataGridView4.TabIndex = 84;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button12);
+            this.tabPage6.Controls.Add(this.button11);
+            this.tabPage6.Controls.Add(this.button10);
+            this.tabPage6.Controls.Add(this.button9);
+            this.tabPage6.Controls.Add(this.button8);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(748, 320);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Reports";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(180, 245);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(180, 204);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 3;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(180, 160);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(180, 121);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(180, 76);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Prod_name
+            // 
+            this.Prod_name.HeaderText = "Name";
+            this.Prod_name.Name = "Prod_name";
+            // 
+            // store
+            // 
+            this.store.HeaderText = "store";
+            this.store.Name = "store";
+            this.store.Width = 50;
+            // 
+            // sup_ID
+            // 
+            this.sup_ID.HeaderText = "ID";
+            this.sup_ID.Name = "sup_ID";
+            this.sup_ID.Width = 50;
+            // 
+            // sup_Name
+            // 
+            this.sup_Name.HeaderText = "Name";
+            this.sup_Name.Name = "sup_Name";
+            // 
+            // sup_Phone
+            // 
+            this.sup_Phone.HeaderText = "Phone";
+            this.sup_Phone.Name = "sup_Phone";
+            this.sup_Phone.Width = 80;
+            // 
+            // client_ID
+            // 
+            this.client_ID.HeaderText = "ID";
+            this.client_ID.Name = "client_ID";
+            // 
+            // client_Name
+            // 
+            this.client_Name.HeaderText = "Name";
+            this.client_Name.Name = "client_Name";
+            // 
+            // client_phone
+            // 
+            this.client_phone.HeaderText = "Phone";
+            this.client_phone.Name = "client_phone";
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1603,6 +1713,7 @@ namespace warehouse_storage_system
             this.Controls.Add(this.tabControl1);
             this.Name = "MainApp";
             this.Text = "Company\'s system";
+            this.Load += new System.EventHandler(this.MainApp_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1619,7 +1730,7 @@ namespace warehouse_storage_system
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1630,8 +1741,8 @@ namespace warehouse_storage_system
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1675,7 +1786,6 @@ namespace warehouse_storage_system
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox prodQuantityTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox prodProdDateTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox prodExpPerTextBox;
         private System.Windows.Forms.Label label22;
@@ -1698,24 +1808,24 @@ namespace warehouse_storage_system
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox availableQuantityTextBox;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox supPhoneTextBox;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox supWebsiteTextBox;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox supFaxTextBox;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox supEmailTextBox;
+        private System.Windows.Forms.Button supDeleteBtn;
+        private System.Windows.Forms.Button supUpdateBtn;
+        private System.Windows.Forms.Button supInsertBtn;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox supMobTextBox;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox supIDTextBox;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox supNameTextBox;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView suppliersGridView;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label31;
@@ -1785,6 +1895,19 @@ namespace warehouse_storage_system
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.ComboBox prodProductionDateComboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn keeper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prod_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn store;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sup_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sup_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sup_Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client_phone;
     }
 }
 
