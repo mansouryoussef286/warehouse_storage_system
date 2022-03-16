@@ -27,6 +27,11 @@
         <AssociationConnector Association="warehouseDBModel.FK_supplierRequest_details_stores" ManuallyRouted="false" />
         <AssociationConnector Association="warehouseDBModel.FK_supplier_requests_suppliers" ManuallyRouted="false" />
         <AssociationConnector Association="warehouseDBModel.FK_supplierRequest_details_supplier_requests" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="warehouseDBModel.products_movement" Width="1.5" PointX="8.25" PointY="3.375" />
+        <AssociationConnector Association="warehouseDBModel.FK_products_movement_product_stores" />
+        <AssociationConnector Association="warehouseDBModel.FK_products_movement_products" />
+        <AssociationConnector Association="warehouseDBModel.FK_products_movement_stores" />
+        <AssociationConnector Association="warehouseDBModel.FK_products_movement_stores1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

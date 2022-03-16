@@ -94,6 +94,9 @@
     <Compile Include="product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="products_movement.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="products_units.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

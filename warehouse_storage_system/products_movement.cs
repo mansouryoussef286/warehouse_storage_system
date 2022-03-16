@@ -12,22 +12,18 @@ namespace warehouse_storage_system
     using System;
     using System.Collections.Generic;
     
-    public partial class product_stores
+    public partial class products_movement
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public product_stores()
-        {
-            this.products_movement = new HashSet<products_movement>();
-        }
-    
         public int product_ID { get; set; }
-        public string store_name { get; set; }
+        public string store_to { get; set; }
+        public string store_from { get; set; }
+        public System.DateTime move_date { get; set; }
         public int quantity { get; set; }
         public System.DateTime production_date { get; set; }
     
+        public virtual product_stores product_stores { get; set; }
         public virtual product product { get; set; }
         public virtual store store { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<products_movement> products_movement { get; set; }
+        public virtual store store1 { get; set; }
     }
 }

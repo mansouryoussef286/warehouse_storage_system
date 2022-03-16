@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="warehouseDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="warehouseDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="client_requests">
           <Key>
             <PropertyRef Name="outRequest_ID" />
@@ -54,6 +54,20 @@
           <Property Name="product_ID" Type="int" Nullable="false" />
           <Property Name="product_name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="expire_period" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="products_movement">
+          <Key>
+            <PropertyRef Name="product_ID" />
+            <PropertyRef Name="store_to" />
+            <PropertyRef Name="store_from" />
+            <PropertyRef Name="move_date" />
+          </Key>
+          <Property Name="product_ID" Type="int" Nullable="false" />
+          <Property Name="store_to" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="store_from" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="move_date" Type="date" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="production_date" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="products_units">
           <Key>
@@ -184,6 +198,58 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_products_movement_product_stores">
+          <End Role="product_stores" Type="Self.product_stores" Multiplicity="1" />
+          <End Role="products_movement" Type="Self.products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product_stores">
+              <PropertyRef Name="product_ID" />
+              <PropertyRef Name="store_name" />
+              <PropertyRef Name="production_date" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="product_ID" />
+              <PropertyRef Name="store_from" />
+              <PropertyRef Name="production_date" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_products">
+          <End Role="products" Type="Self.products" Multiplicity="1" />
+          <End Role="products_movement" Type="Self.products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="products">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_stores">
+          <End Role="stores" Type="Self.stores" Multiplicity="1" />
+          <End Role="products_movement" Type="Self.products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stores">
+              <PropertyRef Name="store_name" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="store_from" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_stores1">
+          <End Role="stores" Type="Self.stores" Multiplicity="1" />
+          <End Role="products_movement" Type="Self.products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stores">
+              <PropertyRef Name="store_name" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="store_to" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_products_units_products">
           <End Role="products" Type="Self.products" Multiplicity="1" />
           <End Role="products_units" Type="Self.products_units" Multiplicity="*" />
@@ -250,6 +316,7 @@
           <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="product_stores" EntityType="Self.product_stores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="products_movement" EntityType="Self.products_movement" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="products_units" EntityType="Self.products_units" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="stores" EntityType="Self.stores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="supplier_requests" EntityType="Self.supplier_requests" Schema="dbo" store:Type="Tables" />
@@ -280,6 +347,22 @@
             <End Role="stores" EntitySet="stores" />
             <End Role="product_stores" EntitySet="product_stores" />
           </AssociationSet>
+          <AssociationSet Name="FK_products_movement_product_stores" Association="Self.FK_products_movement_product_stores">
+            <End Role="product_stores" EntitySet="product_stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_products" Association="Self.FK_products_movement_products">
+            <End Role="products" EntitySet="products" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_stores" Association="Self.FK_products_movement_stores">
+            <End Role="stores" EntitySet="stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_stores1" Association="Self.FK_products_movement_stores1">
+            <End Role="stores" EntitySet="stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
           <AssociationSet Name="FK_products_units_products" Association="Self.FK_products_units_products">
             <End Role="products" EntitySet="products" />
             <End Role="products_units" EntitySet="products_units" />
@@ -301,8 +384,7 @@
             <End Role="supplierRequest_details" EntitySet="supplierRequest_details" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="warehouseDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -355,6 +437,7 @@
           <Property Name="production_date" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="product" Relationship="Self.FK_product_stores_products" FromRole="product_stores" ToRole="products" />
           <NavigationProperty Name="store" Relationship="Self.FK_product_stores_stores" FromRole="product_stores" ToRole="stores" />
+          <NavigationProperty Name="products_movement" Relationship="warehouseDBModel.FK_products_movement_product_stores" FromRole="product_stores" ToRole="products_movement" />
         </EntityType>
         <EntityType Name="product">
           <Key>
@@ -367,6 +450,7 @@
           <NavigationProperty Name="product_stores" Relationship="Self.FK_product_stores_products" FromRole="products" ToRole="product_stores" />
           <NavigationProperty Name="products_units" Relationship="Self.FK_products_units_products" FromRole="products" ToRole="products_units" />
           <NavigationProperty Name="supplierRequest_details" Relationship="Self.FK_supplierRequest_details_products" FromRole="products" ToRole="supplierRequest_details" />
+          <NavigationProperty Name="products_movement" Relationship="warehouseDBModel.FK_products_movement_products" FromRole="product" ToRole="products_movement" />
         </EntityType>
         <EntityType Name="products_units">
           <Key>
@@ -387,7 +471,9 @@
           <NavigationProperty Name="clientRequest_details" Relationship="Self.FK_clientRequest_details_stores" FromRole="stores" ToRole="clientRequest_details" />
           <NavigationProperty Name="product_stores" Relationship="Self.FK_product_stores_stores" FromRole="stores" ToRole="product_stores" />
           <NavigationProperty Name="supplierRequest_details" Relationship="Self.FK_supplierRequest_details_stores" FromRole="stores" ToRole="supplierRequest_details" />
-        </EntityType>
+          <NavigationProperty Name="products_movement" Relationship="warehouseDBModel.FK_products_movement_stores" FromRole="store" ToRole="products_movement" />
+          <NavigationProperty Name="products_movement1" Relationship="warehouseDBModel.FK_products_movement_stores1" FromRole="store" ToRole="products_movement" />
+          </EntityType>
         <EntityType Name="supplier_requests">
           <Key>
             <PropertyRef Name="inRequest_ID" />
@@ -623,8 +709,95 @@
             <End Role="supplier_requests" EntitySet="supplier_requests" />
             <End Role="supplierRequest_details" EntitySet="supplierRequest_details" />
           </AssociationSet>
-        </EntityContainer>
-      </Schema>
+          <EntitySet Name="products_movement" EntityType="warehouseDBModel.products_movement" />
+          <AssociationSet Name="FK_products_movement_product_stores" Association="warehouseDBModel.FK_products_movement_product_stores">
+            <End Role="product_stores" EntitySet="product_stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_products" Association="warehouseDBModel.FK_products_movement_products">
+            <End Role="product" EntitySet="products" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_stores" Association="warehouseDBModel.FK_products_movement_stores">
+            <End Role="store" EntitySet="stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_products_movement_stores1" Association="warehouseDBModel.FK_products_movement_stores1">
+            <End Role="store" EntitySet="stores" />
+            <End Role="products_movement" EntitySet="products_movement" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="products_movement">
+          <Key>
+            <PropertyRef Name="product_ID" />
+            <PropertyRef Name="store_to" />
+            <PropertyRef Name="store_from" />
+            <PropertyRef Name="move_date" />
+          </Key>
+          <Property Name="product_ID" Type="Int32" Nullable="false" />
+          <Property Name="store_to" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="store_from" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="move_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="production_date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="product_stores" Relationship="warehouseDBModel.FK_products_movement_product_stores" FromRole="products_movement" ToRole="product_stores" />
+          <NavigationProperty Name="product" Relationship="warehouseDBModel.FK_products_movement_products" FromRole="products_movement" ToRole="product" />
+          <NavigationProperty Name="store" Relationship="warehouseDBModel.FK_products_movement_stores" FromRole="products_movement" ToRole="store" />
+          <NavigationProperty Name="store1" Relationship="warehouseDBModel.FK_products_movement_stores1" FromRole="products_movement" ToRole="store" />
+        </EntityType>
+        <Association Name="FK_products_movement_product_stores">
+          <End Type="warehouseDBModel.product_stores" Role="product_stores" Multiplicity="1" />
+          <End Type="warehouseDBModel.products_movement" Role="products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product_stores">
+              <PropertyRef Name="product_ID" />
+              <PropertyRef Name="store_name" />
+              <PropertyRef Name="production_date" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="product_ID" />
+              <PropertyRef Name="store_from" />
+              <PropertyRef Name="production_date" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_products">
+          <End Type="warehouseDBModel.product" Role="product" Multiplicity="1" />
+          <End Type="warehouseDBModel.products_movement" Role="products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_stores">
+          <End Type="warehouseDBModel.store" Role="store" Multiplicity="1" />
+          <End Type="warehouseDBModel.products_movement" Role="products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="store">
+              <PropertyRef Name="store_name" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="store_from" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_products_movement_stores1">
+          <End Type="warehouseDBModel.store" Role="store" Multiplicity="1" />
+          <End Type="warehouseDBModel.products_movement" Role="products_movement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="store">
+              <PropertyRef Name="store_name" />
+            </Principal>
+            <Dependent Role="products_movement">
+              <PropertyRef Name="store_to" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -738,6 +911,18 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products_movement">
+            <EntityTypeMapping TypeName="warehouseDBModel.products_movement">
+              <MappingFragment StoreEntitySet="products_movement">
+                <ScalarProperty Name="production_date" ColumnName="production_date" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="move_date" ColumnName="move_date" />
+                <ScalarProperty Name="store_from" ColumnName="store_from" />
+                <ScalarProperty Name="store_to" ColumnName="store_to" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

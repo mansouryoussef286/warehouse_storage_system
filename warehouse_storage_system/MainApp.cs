@@ -29,6 +29,7 @@ namespace warehouse_storage_system
             fillSuppliersGridView();
             fillClientsGridView();
             fillProductsGridView();
+            fillFromToStoresGridView();
         }
 
         #region stores tab
@@ -133,7 +134,7 @@ namespace warehouse_storage_system
             fillStoresGridView();
         }
         #endregion
-        
+
         //*******************************************************************//
         #region suppliers tab
         public void fillSuppliersGridView()
@@ -217,7 +218,7 @@ namespace warehouse_storage_system
             }
         }
         #endregion
-        
+
         //*******************************************************************//
         #region client tab
         public void fillClientsGridView()
@@ -301,9 +302,9 @@ namespace warehouse_storage_system
             }
         }
         #endregion
-        //*******************************************************************//
 
-        #region products tab
+        //*******************************************************************//
+        #region products tab update product
         public void fillProductsGridView()
         {
             productsGridView_p.Rows.Clear();
@@ -313,6 +314,275 @@ namespace warehouse_storage_system
             }
         }
 
+        private void productsGridView_p_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (productsGridView_p.SelectedRows.Count == 1)
+            {
+                int productID = int.Parse(productsGridView_p.SelectedRows[0].Cells[0].Value.ToString());
+                var product = (entities.products.Where(p => p.product_ID == productID).Select(p => p)).First();
+                prodIDTextBox.Text = product.product_ID.ToString();
+                prodNameTextBox.Text = product.product_name;
+                prodExpPerTextBox.Text = product.expire_period.ToString();
+
+                //get the stores where this product is stored in
+                var stores = entities.product_stores.Where(s => s.product_ID == productID)
+                    .Select(s => s.store_name).Distinct();
+                //clear the stores, production dates boxes and the quantity
+                prodStoreComboBox.Items.Clear();
+                prodStoreComboBox.Text = "";
+                prodProductionDateComboBox.Items.Clear();
+                prodProductionDateComboBox.Text = "";
+                prodQuantityTextBox.Text = "NULL";
+                //refill the stores
+                foreach (var store in stores)
+                {
+                    prodStoreComboBox.Items.Add(store);
+                }
+                //select the first store
+                if (prodStoreComboBox.Items.Count > 0)
+                {
+                    prodStoreComboBox.SelectedIndex = 0;
+                }
+            }
+            else
+            {
+                MessageBox.Show("please select one product");
+            }
+
+        }
+
+        private void prodStoreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get the production dates available in the specified store of that product
+            string storeName = prodStoreComboBox.SelectedItem.ToString();
+            int productID = int.Parse(productsGridView_p.SelectedRows[0].Cells[0].Value.ToString());
+            var prodDates = entities.product_stores.Where(p => p.store_name == storeName && p.product_ID == productID)
+                .Select(p => p.production_date);
+
+            prodProductionDateComboBox.Items.Clear();
+            prodQuantityTextBox.Text = "NULL";
+
+            foreach (var prodDate in prodDates)
+            {
+                prodProductionDateComboBox.Items.Add(prodDate.ToString().Split(' ')[0]);
+            }
+            //select the first production date
+            if (prodProductionDateComboBox.Items.Count > 0)
+            {
+                prodProductionDateComboBox.SelectedIndex = 0;
+            }
+        }
+
+        private void prodProductionDateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string storeName = prodStoreComboBox.SelectedItem.ToString();
+                int productID = int.Parse(productsGridView_p.SelectedRows[0].Cells[0].Value.ToString());
+                DateTime prodDate = DateTime.Parse(prodProductionDateComboBox.SelectedItem.ToString());
+                int quantity = entities.product_stores.Where(p => p.store_name == storeName && p.product_ID == productID && p.production_date == prodDate)
+                    .Select(p => p.quantity).First();
+                prodQuantityTextBox.Text = quantity.ToString();
+            }
+            catch
+            {
+                prodQuantityTextBox.Text = "NULL";
+                MessageBox.Show("no products");
+            }
+
+        }
+
+        private void deleteProductBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insertProductBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int productID = int.Parse(prodIDTextBox.Text);
+                string prodName = prodNameTextBox.Text;
+                int expPeriod = int.Parse(prodExpPerTextBox.Text);
+                var newProd = new product();
+                newProd.product_ID = productID;
+                newProd.product_name = prodName;
+                newProd.expire_period = expPeriod;
+                entities.products.Add(newProd);
+                entities.SaveChanges();
+                fillProductsGridView();
+            }
+            catch
+            {
+                MessageBox.Show("error happened product isnot inserted!");
+            }
+        }
+
+        private void updateProductBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int productID = int.Parse(prodIDTextBox.Text);
+                string prodName = prodNameTextBox.Text;
+                int expPeriod = int.Parse(prodExpPerTextBox.Text);
+                var product = entities.products.Find(productID);
+                //product.product_ID = int.Parse(prodIDTextBox.Text);//cannot update a pk in EF
+                product.product_name = prodName;
+                product.expire_period = expPeriod;
+                entities.SaveChanges();
+                fillProductsGridView();
+            }
+            catch
+            {
+                MessageBox.Show("error happened product isnot updated!");
+            }
+        }
         #endregion
+
+        //*******************************************************************//
+        #region products tab move product
+        public void fillFromToStoresGridView()
+        {
+            fromStoreGridView.Rows.Clear();
+            foreach (var store in entities.stores)
+            {
+                fromStoreGridView.Rows.Add(store.store_name);
+            }
+            toStoreGridView.Rows.Clear();
+            foreach (var store in entities.stores)
+            {
+                toStoreGridView.Rows.Add(store.store_name);
+            }
+        }
+
+        #endregion
+
+        private void fromStoreGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string storeName = fromStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
+            var products = entities.product_stores.Where(p => p.store_name == storeName)
+                .Select(p => new { p.product_ID, p.product.product_name }).Distinct();
+            //fill products ids and names
+            prodIDComboBox.Items.Clear();
+            prodIDComboBox.Text = "";
+            foreach (var product in products)
+            {
+                prodIDComboBox.Items.Add(product.product_ID);
+            }
+            prodNameComboBox.Items.Clear();
+            prodNameComboBox.Text = "";
+            foreach (var product in products)
+            {
+                prodNameComboBox.Items.Add(product.product_name);
+            }
+            //clear the form
+            prodExpPeriodTextBox.Text = "";
+            prodProdDateComboBox.Text = "";
+            reqQuantityTextBox.Text = "";
+            availableQuantityTextBox.Text = "";
+            //select first product if existed 
+            if (prodIDComboBox.Items.Count > 0)
+            {
+                prodIDComboBox.SelectedIndex = 0;
+                prodNameComboBox.SelectedIndex = 0;
+            }
+        }
+
+
+        private void prodIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prodNameComboBox.SelectedIndex = prodIDComboBox.SelectedIndex;
+            int prodID = int.Parse(prodIDComboBox.SelectedItem.ToString());
+            string storeName = fromStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
+            var prodStores = entities.product_stores.Where(p => p.product_ID == prodID && p.store_name == storeName)
+                .Select(p => p);
+
+            prodProdDateComboBox.Items.Clear();
+            foreach (var product in prodStores)
+            {
+                prodProdDateComboBox.Items.Add(product.production_date.ToString().Split(' ')[0]);
+            }
+            prodExpPeriodTextBox.Text = entities.products.Where(p => p.product_ID == prodID)
+                .Select(p => p.expire_period).First().ToString();
+        }
+
+        private void prodNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prodIDComboBox.SelectedIndex = prodNameComboBox.SelectedIndex;
+        }
+
+        private void prodProdDateComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int prodID = int.Parse(prodIDComboBox.SelectedItem.ToString());
+            string storeName = fromStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
+            DateTime prodDate = DateTime.Parse(prodProdDateComboBox.SelectedItem.ToString());
+            int quantity = entities.product_stores.Where(p => p.product_ID == prodID && p.store_name == storeName && p.production_date == prodDate)
+                .Select(p => p.quantity).First();
+            availableQuantityTextBox.Text = quantity.ToString();
+        }
+
+        private void mvoeProductBtn_Click(object sender, EventArgs e)
+        {
+            //check on the required quantity
+            int check;
+            int.TryParse(reqQuantityTextBox.Text, out check);
+            if (reqQuantityTextBox.Text != "" && check != 0)
+            {
+                int reqQuantity = int.Parse(reqQuantityTextBox.Text);
+                int avaQuantity = int.Parse(availableQuantityTextBox.Text);
+                string fromstoreName = fromStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
+                string toStoreName = toStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
+
+                int prodID = int.Parse(prodIDComboBox.SelectedItem.ToString());
+                DateTime prodDate = DateTime.Parse(prodProdDateComboBox.SelectedItem.ToString());
+
+
+                if (reqQuantity <= avaQuantity)
+                {
+                    //subtract the moved quantity from store 1
+                    var prodStoresFrom = entities.product_stores.Where(p => p.product_ID == prodID && p.store_name == fromstoreName && p.production_date == prodDate)
+                        .Select(p => p).First();
+                    prodStoresFrom.quantity -= reqQuantity;
+                    //add the moved quantity to store 2 if the product exists or add the product with the moved quantity
+                    var prodStoresTo = entities.product_stores.Where(p => p.product_ID == prodID && p.store_name == toStoreName && p.production_date == prodDate)
+                        .Select(p => p).FirstOrDefault();
+                    //move the product
+                    if(prodStoresTo != null) //the product exists in the ingoing store
+                    {
+                        prodStoresTo.quantity += reqQuantity;
+                    }
+                    else        //the product doesnot exist in the outgoing store
+                    {
+                        prodStoresTo = new product_stores();
+                        prodStoresTo.product_ID = prodID;
+                        prodStoresTo.store_name = toStoreName;
+                        prodStoresTo.production_date = prodDate;
+                        prodStoresTo.quantity = reqQuantity;
+                        entities.product_stores.Add(prodStoresTo);
+                    }
+                    //add this move in the log table products movement
+                    var prodMove = new products_movement();
+                    prodMove.store_from = fromstoreName;
+                    prodMove.store_to = toStoreName;
+                    prodMove.product_ID = prodID;
+                    prodMove.production_date = prodDate;
+                    prodMove.move_date = DateTime.Today;
+                    prodMove.quantity = reqQuantity;
+                    entities.products_movement.Add(prodMove);
+                    entities.SaveChanges();
+                    //update form
+                    fillFromToStoresGridView();
+                }
+                else
+                {
+                    MessageBox.Show("required quantity isn't available");
+                }
+            }
+            else
+            {
+                MessageBox.Show("enter a numbered quantity");
+            }
+        }
     }
+
 }

@@ -36,5 +36,6 @@ namespace warehouse_storage_system
         public virtual DbSet<supplierRequest_details> supplierRequest_details { get; set; }
         public virtual DbSet<supplier> suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<products_movement> products_movement { get; set; }
     }
 }

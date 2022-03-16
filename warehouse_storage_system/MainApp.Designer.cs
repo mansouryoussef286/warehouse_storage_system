@@ -39,6 +39,9 @@ namespace warehouse_storage_system
             this.storeNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.productsGridView_s = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prod_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.store = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteStoreBtn = new System.Windows.Forms.Button();
             this.updateStoreBtn = new System.Windows.Forms.Button();
             this.insertStoreBtn = new System.Windows.Forms.Button();
@@ -50,43 +53,48 @@ namespace warehouse_storage_system
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.updateProductBtn = new System.Windows.Forms.Button();
+            this.insertProductBtn = new System.Windows.Forms.Button();
             this.prodProductionDateComboBox = new System.Windows.Forms.ComboBox();
             this.deleteProductBtn = new System.Windows.Forms.Button();
-            this.updateProductBtn = new System.Windows.Forms.Button();
             this.prodStoreComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.prodQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.prodExpPerTextBox = new System.Windows.Forms.TextBox();
+            this.prodNameTextBox = new System.Windows.Forms.TextBox();
+            this.prodIDTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.prodExpPerTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.prodNameTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.prodIDTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.productsGridView_p = new System.Windows.Forms.DataGridView();
-            this.insertProductBtn = new System.Windows.Forms.Button();
+            this.PROD_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expire_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.prodExpPeriodTextBox = new System.Windows.Forms.TextBox();
+            this.fromStoreGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label16 = new System.Windows.Forms.Label();
             this.availableQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.reqQuantityTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.toStoreGridView = new System.Windows.Forms.DataGridView();
+            this.storetoName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.prodNameComboBox = new System.Windows.Forms.ComboBox();
-            this.prodExpPerComboBox = new System.Windows.Forms.ComboBox();
             this.prodProdDateComboBox = new System.Windows.Forms.ComboBox();
             this.prodIDComboBox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.reqQuantityTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.fromStoreGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.moveProductBtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
             this.supPhoneTextBox = new System.Windows.Forms.TextBox();
@@ -107,6 +115,9 @@ namespace warehouse_storage_system
             this.supNameTextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.suppliersGridView = new System.Windows.Forms.DataGridView();
+            this.sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.clientPhoneTextBox = new System.Windows.Forms.TextBox();
@@ -127,6 +138,9 @@ namespace warehouse_storage_system
             this.clientNameTextBox = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.clientsGridView = new System.Windows.Forms.DataGridView();
+            this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
@@ -179,18 +193,6 @@ namespace warehouse_storage_system
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prod_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.store = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sup_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sup_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROD_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expire_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).BeginInit();
@@ -200,8 +202,8 @@ namespace warehouse_storage_system
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_p)).BeginInit();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -322,8 +324,26 @@ namespace warehouse_storage_system
             this.productsGridView_s.Size = new System.Drawing.Size(245, 211);
             this.productsGridView_s.TabIndex = 5;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Prod_name
+            // 
+            this.Prod_name.HeaderText = "Name";
+            this.Prod_name.Name = "Prod_name";
+            // 
+            // store
+            // 
+            this.store.HeaderText = "store";
+            this.store.Name = "store";
+            this.store.Width = 50;
+            // 
             // deleteStoreBtn
             // 
+            this.deleteStoreBtn.Enabled = false;
             this.deleteStoreBtn.Location = new System.Drawing.Point(283, 268);
             this.deleteStoreBtn.Name = "deleteStoreBtn";
             this.deleteStoreBtn.Size = new System.Drawing.Size(98, 23);
@@ -423,23 +443,23 @@ namespace warehouse_storage_system
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.updateProductBtn);
+            this.tabPage7.Controls.Add(this.insertProductBtn);
             this.tabPage7.Controls.Add(this.prodProductionDateComboBox);
             this.tabPage7.Controls.Add(this.deleteProductBtn);
-            this.tabPage7.Controls.Add(this.updateProductBtn);
             this.tabPage7.Controls.Add(this.prodStoreComboBox);
             this.tabPage7.Controls.Add(this.label12);
             this.tabPage7.Controls.Add(this.prodQuantityTextBox);
+            this.tabPage7.Controls.Add(this.prodExpPerTextBox);
+            this.tabPage7.Controls.Add(this.prodNameTextBox);
+            this.tabPage7.Controls.Add(this.prodIDTextBox);
             this.tabPage7.Controls.Add(this.label10);
             this.tabPage7.Controls.Add(this.label11);
-            this.tabPage7.Controls.Add(this.prodExpPerTextBox);
             this.tabPage7.Controls.Add(this.label6);
             this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Controls.Add(this.prodNameTextBox);
             this.tabPage7.Controls.Add(this.label8);
-            this.tabPage7.Controls.Add(this.prodIDTextBox);
             this.tabPage7.Controls.Add(this.label9);
             this.tabPage7.Controls.Add(this.productsGridView_p);
-            this.tabPage7.Controls.Add(this.insertProductBtn);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -448,39 +468,54 @@ namespace warehouse_storage_system
             this.tabPage7.Text = "Update product";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // updateProductBtn
+            // 
+            this.updateProductBtn.Location = new System.Drawing.Point(495, 99);
+            this.updateProductBtn.Name = "updateProductBtn";
+            this.updateProductBtn.Size = new System.Drawing.Size(98, 23);
+            this.updateProductBtn.TabIndex = 33;
+            this.updateProductBtn.Text = "update";
+            this.updateProductBtn.UseVisualStyleBackColor = true;
+            this.updateProductBtn.Click += new System.EventHandler(this.updateProductBtn_Click);
+            // 
+            // insertProductBtn
+            // 
+            this.insertProductBtn.Location = new System.Drawing.Point(495, 70);
+            this.insertProductBtn.Name = "insertProductBtn";
+            this.insertProductBtn.Size = new System.Drawing.Size(98, 23);
+            this.insertProductBtn.TabIndex = 32;
+            this.insertProductBtn.Text = "insert";
+            this.insertProductBtn.UseVisualStyleBackColor = true;
+            this.insertProductBtn.Click += new System.EventHandler(this.insertProductBtn_Click);
+            // 
             // prodProductionDateComboBox
             // 
             this.prodProductionDateComboBox.FormattingEnabled = true;
-            this.prodProductionDateComboBox.Location = new System.Drawing.Point(405, 127);
+            this.prodProductionDateComboBox.Location = new System.Drawing.Point(405, 164);
             this.prodProductionDateComboBox.Name = "prodProductionDateComboBox";
-            this.prodProductionDateComboBox.Size = new System.Drawing.Size(55, 21);
+            this.prodProductionDateComboBox.Size = new System.Drawing.Size(77, 21);
             this.prodProductionDateComboBox.TabIndex = 31;
+            this.prodProductionDateComboBox.SelectedIndexChanged += new System.EventHandler(this.prodProductionDateComboBox_SelectedIndexChanged);
             // 
             // deleteProductBtn
             // 
+            this.deleteProductBtn.Enabled = false;
             this.deleteProductBtn.Location = new System.Drawing.Point(495, 162);
             this.deleteProductBtn.Name = "deleteProductBtn";
             this.deleteProductBtn.Size = new System.Drawing.Size(98, 23);
             this.deleteProductBtn.TabIndex = 30;
             this.deleteProductBtn.Text = "delete";
             this.deleteProductBtn.UseVisualStyleBackColor = true;
-            // 
-            // updateProductBtn
-            // 
-            this.updateProductBtn.Location = new System.Drawing.Point(495, 124);
-            this.updateProductBtn.Name = "updateProductBtn";
-            this.updateProductBtn.Size = new System.Drawing.Size(98, 23);
-            this.updateProductBtn.TabIndex = 29;
-            this.updateProductBtn.Text = "update";
-            this.updateProductBtn.UseVisualStyleBackColor = true;
+            this.deleteProductBtn.Click += new System.EventHandler(this.deleteProductBtn_Click);
             // 
             // prodStoreComboBox
             // 
             this.prodStoreComboBox.FormattingEnabled = true;
-            this.prodStoreComboBox.Location = new System.Drawing.Point(340, 127);
+            this.prodStoreComboBox.Location = new System.Drawing.Point(340, 164);
             this.prodStoreComboBox.Name = "prodStoreComboBox";
             this.prodStoreComboBox.Size = new System.Drawing.Size(55, 21);
             this.prodStoreComboBox.TabIndex = 28;
+            this.prodStoreComboBox.SelectedIndexChanged += new System.EventHandler(this.prodStoreComboBox_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -495,13 +530,34 @@ namespace warehouse_storage_system
             // 
             this.prodQuantityTextBox.Location = new System.Drawing.Point(340, 204);
             this.prodQuantityTextBox.Name = "prodQuantityTextBox";
-            this.prodQuantityTextBox.Size = new System.Drawing.Size(120, 20);
+            this.prodQuantityTextBox.Size = new System.Drawing.Size(142, 20);
             this.prodQuantityTextBox.TabIndex = 26;
+            // 
+            // prodExpPerTextBox
+            // 
+            this.prodExpPerTextBox.Location = new System.Drawing.Point(340, 128);
+            this.prodExpPerTextBox.Name = "prodExpPerTextBox";
+            this.prodExpPerTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodExpPerTextBox.TabIndex = 22;
+            // 
+            // prodNameTextBox
+            // 
+            this.prodNameTextBox.Location = new System.Drawing.Point(340, 91);
+            this.prodNameTextBox.Name = "prodNameTextBox";
+            this.prodNameTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodNameTextBox.TabIndex = 18;
+            // 
+            // prodIDTextBox
+            // 
+            this.prodIDTextBox.Location = new System.Drawing.Point(340, 55);
+            this.prodIDTextBox.Name = "prodIDTextBox";
+            this.prodIDTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodIDTextBox.TabIndex = 16;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(402, 114);
+            this.label10.Location = new System.Drawing.Point(402, 151);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 25;
@@ -510,23 +566,16 @@ namespace warehouse_storage_system
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(337, 149);
+            this.label11.Location = new System.Drawing.Point(337, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 13);
             this.label11.TabIndex = 23;
             this.label11.Text = "expire period";
             // 
-            // prodExpPerTextBox
-            // 
-            this.prodExpPerTextBox.Location = new System.Drawing.Point(340, 165);
-            this.prodExpPerTextBox.Name = "prodExpPerTextBox";
-            this.prodExpPerTextBox.Size = new System.Drawing.Size(120, 20);
-            this.prodExpPerTextBox.TabIndex = 22;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 111);
+            this.label6.Location = new System.Drawing.Point(337, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 21;
@@ -541,13 +590,6 @@ namespace warehouse_storage_system
             this.label7.TabIndex = 19;
             this.label7.Text = "name";
             // 
-            // prodNameTextBox
-            // 
-            this.prodNameTextBox.Location = new System.Drawing.Point(340, 91);
-            this.prodNameTextBox.Name = "prodNameTextBox";
-            this.prodNameTextBox.Size = new System.Drawing.Size(120, 20);
-            this.prodNameTextBox.TabIndex = 18;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -556,13 +598,6 @@ namespace warehouse_storage_system
             this.label8.Size = new System.Drawing.Size(18, 13);
             this.label8.TabIndex = 17;
             this.label8.Text = "ID";
-            // 
-            // prodIDTextBox
-            // 
-            this.prodIDTextBox.Location = new System.Drawing.Point(340, 55);
-            this.prodIDTextBox.Name = "prodIDTextBox";
-            this.prodIDTextBox.Size = new System.Drawing.Size(120, 20);
-            this.prodIDTextBox.TabIndex = 16;
             // 
             // label9
             // 
@@ -585,37 +620,45 @@ namespace warehouse_storage_system
             this.productsGridView_p.Name = "productsGridView_p";
             this.productsGridView_p.Size = new System.Drawing.Size(294, 211);
             this.productsGridView_p.TabIndex = 14;
+            this.productsGridView_p.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productsGridView_p_RowHeaderMouseClick);
             // 
-            // insertProductBtn
+            // PROD_id
             // 
-            this.insertProductBtn.Location = new System.Drawing.Point(495, 88);
-            this.insertProductBtn.Name = "insertProductBtn";
-            this.insertProductBtn.Size = new System.Drawing.Size(98, 23);
-            this.insertProductBtn.TabIndex = 13;
-            this.insertProductBtn.Text = "insert";
-            this.insertProductBtn.UseVisualStyleBackColor = true;
+            this.PROD_id.HeaderText = "ID";
+            this.PROD_id.Name = "PROD_id";
+            this.PROD_id.Width = 50;
+            // 
+            // prod_namee
+            // 
+            this.prod_namee.HeaderText = "name";
+            this.prod_namee.Name = "prod_namee";
+            // 
+            // expire_period
+            // 
+            this.expire_period.HeaderText = "expire period";
+            this.expire_period.Name = "expire_period";
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.prodExpPeriodTextBox);
+            this.tabPage8.Controls.Add(this.fromStoreGridView);
             this.tabPage8.Controls.Add(this.label16);
             this.tabPage8.Controls.Add(this.availableQuantityTextBox);
+            this.tabPage8.Controls.Add(this.reqQuantityTextBox);
             this.tabPage8.Controls.Add(this.label22);
             this.tabPage8.Controls.Add(this.toStoreGridView);
             this.tabPage8.Controls.Add(this.label21);
             this.tabPage8.Controls.Add(this.label20);
             this.tabPage8.Controls.Add(this.prodNameComboBox);
-            this.tabPage8.Controls.Add(this.prodExpPerComboBox);
             this.tabPage8.Controls.Add(this.prodProdDateComboBox);
             this.tabPage8.Controls.Add(this.prodIDComboBox);
             this.tabPage8.Controls.Add(this.label13);
-            this.tabPage8.Controls.Add(this.reqQuantityTextBox);
             this.tabPage8.Controls.Add(this.label14);
             this.tabPage8.Controls.Add(this.label15);
             this.tabPage8.Controls.Add(this.label17);
             this.tabPage8.Controls.Add(this.label18);
             this.tabPage8.Controls.Add(this.label19);
-            this.tabPage8.Controls.Add(this.fromStoreGridView);
-            this.tabPage8.Controls.Add(this.button3);
+            this.tabPage8.Controls.Add(this.moveProductBtn);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -624,10 +667,38 @@ namespace warehouse_storage_system
             this.tabPage8.Text = "Move product";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // prodExpPeriodTextBox
+            // 
+            this.prodExpPeriodTextBox.Location = new System.Drawing.Point(260, 135);
+            this.prodExpPeriodTextBox.Name = "prodExpPeriodTextBox";
+            this.prodExpPeriodTextBox.Size = new System.Drawing.Size(120, 20);
+            this.prodExpPeriodTextBox.TabIndex = 59;
+            // 
+            // fromStoreGridView
+            // 
+            this.fromStoreGridView.AllowUserToAddRows = false;
+            this.fromStoreGridView.AllowUserToDeleteRows = false;
+            this.fromStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.fromStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.fromStoreGridView.Location = new System.Drawing.Point(113, 45);
+            this.fromStoreGridView.Name = "fromStoreGridView";
+            this.fromStoreGridView.ReadOnly = true;
+            this.fromStoreGridView.Size = new System.Drawing.Size(121, 183);
+            this.fromStoreGridView.TabIndex = 58;
+            this.fromStoreGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.fromStoreGridView_RowHeaderMouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(255, 117);
+            this.label16.Location = new System.Drawing.Point(256, 192);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 13);
             this.label16.TabIndex = 57;
@@ -635,11 +706,18 @@ namespace warehouse_storage_system
             // 
             // availableQuantityTextBox
             // 
-            this.availableQuantityTextBox.Enabled = false;
-            this.availableQuantityTextBox.Location = new System.Drawing.Point(259, 133);
+            this.availableQuantityTextBox.Location = new System.Drawing.Point(259, 208);
             this.availableQuantityTextBox.Name = "availableQuantityTextBox";
+            this.availableQuantityTextBox.ReadOnly = true;
             this.availableQuantityTextBox.Size = new System.Drawing.Size(55, 20);
             this.availableQuantityTextBox.TabIndex = 56;
+            // 
+            // reqQuantityTextBox
+            // 
+            this.reqQuantityTextBox.Location = new System.Drawing.Point(326, 208);
+            this.reqQuantityTextBox.Name = "reqQuantityTextBox";
+            this.reqQuantityTextBox.Size = new System.Drawing.Size(55, 20);
+            this.reqQuantityTextBox.TabIndex = 43;
             // 
             // label22
             // 
@@ -654,10 +732,17 @@ namespace warehouse_storage_system
             // toStoreGridView
             // 
             this.toStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.toStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.storetoName});
             this.toStoreGridView.Location = new System.Drawing.Point(458, 45);
             this.toStoreGridView.Name = "toStoreGridView";
             this.toStoreGridView.Size = new System.Drawing.Size(121, 183);
             this.toStoreGridView.TabIndex = 54;
+            // 
+            // storetoName
+            // 
+            this.storetoName.HeaderText = "name";
+            this.storetoName.Name = "storetoName";
             // 
             // label21
             // 
@@ -686,22 +771,16 @@ namespace warehouse_storage_system
             this.prodNameComboBox.Name = "prodNameComboBox";
             this.prodNameComboBox.Size = new System.Drawing.Size(121, 21);
             this.prodNameComboBox.TabIndex = 51;
-            // 
-            // prodExpPerComboBox
-            // 
-            this.prodExpPerComboBox.FormattingEnabled = true;
-            this.prodExpPerComboBox.Location = new System.Drawing.Point(260, 171);
-            this.prodExpPerComboBox.Name = "prodExpPerComboBox";
-            this.prodExpPerComboBox.Size = new System.Drawing.Size(121, 21);
-            this.prodExpPerComboBox.TabIndex = 50;
+            this.prodNameComboBox.SelectedIndexChanged += new System.EventHandler(this.prodNameComboBox_SelectedIndexChanged);
             // 
             // prodProdDateComboBox
             // 
             this.prodProdDateComboBox.FormattingEnabled = true;
-            this.prodProdDateComboBox.Location = new System.Drawing.Point(260, 207);
+            this.prodProdDateComboBox.Location = new System.Drawing.Point(260, 171);
             this.prodProdDateComboBox.Name = "prodProdDateComboBox";
             this.prodProdDateComboBox.Size = new System.Drawing.Size(121, 21);
             this.prodProdDateComboBox.TabIndex = 49;
+            this.prodProdDateComboBox.SelectedIndexChanged += new System.EventHandler(this.prodProdDateComboBox_SelectedIndexChanged);
             // 
             // prodIDComboBox
             // 
@@ -710,27 +789,21 @@ namespace warehouse_storage_system
             this.prodIDComboBox.Name = "prodIDComboBox";
             this.prodIDComboBox.Size = new System.Drawing.Size(121, 21);
             this.prodIDComboBox.TabIndex = 48;
+            this.prodIDComboBox.SelectedIndexChanged += new System.EventHandler(this.prodIDComboBox_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(322, 117);
+            this.label13.Location = new System.Drawing.Point(322, 192);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 44;
             this.label13.Text = "required";
             // 
-            // reqQuantityTextBox
-            // 
-            this.reqQuantityTextBox.Location = new System.Drawing.Point(326, 133);
-            this.reqQuantityTextBox.Name = "reqQuantityTextBox";
-            this.reqQuantityTextBox.Size = new System.Drawing.Size(55, 20);
-            this.reqQuantityTextBox.TabIndex = 43;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(257, 191);
+            this.label14.Location = new System.Drawing.Point(257, 155);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(83, 13);
             this.label14.TabIndex = 42;
@@ -739,7 +812,7 @@ namespace warehouse_storage_system
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(257, 155);
+            this.label15.Location = new System.Drawing.Point(257, 119);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 13);
             this.label15.TabIndex = 40;
@@ -773,22 +846,15 @@ namespace warehouse_storage_system
             this.label19.TabIndex = 33;
             this.label19.Text = "Products:";
             // 
-            // fromStoreGridView
+            // moveProductBtn
             // 
-            this.fromStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.fromStoreGridView.Location = new System.Drawing.Point(113, 45);
-            this.fromStoreGridView.Name = "fromStoreGridView";
-            this.fromStoreGridView.Size = new System.Drawing.Size(121, 183);
-            this.fromStoreGridView.TabIndex = 32;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(259, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 23);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "move";
-            this.button3.UseVisualStyleBackColor = true;
+            this.moveProductBtn.Location = new System.Drawing.Point(259, 243);
+            this.moveProductBtn.Name = "moveProductBtn";
+            this.moveProductBtn.Size = new System.Drawing.Size(122, 23);
+            this.moveProductBtn.TabIndex = 31;
+            this.moveProductBtn.Text = "move";
+            this.moveProductBtn.UseVisualStyleBackColor = true;
+            this.moveProductBtn.Click += new System.EventHandler(this.mvoeProductBtn_Click);
             // 
             // tabPage3
             // 
@@ -985,6 +1051,23 @@ namespace warehouse_storage_system
             this.suppliersGridView.TabIndex = 13;
             this.suppliersGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.suppliersGridView_RowHeaderMouseClick);
             // 
+            // sup_ID
+            // 
+            this.sup_ID.HeaderText = "ID";
+            this.sup_ID.Name = "sup_ID";
+            this.sup_ID.Width = 50;
+            // 
+            // sup_Name
+            // 
+            this.sup_Name.HeaderText = "Name";
+            this.sup_Name.Name = "sup_Name";
+            // 
+            // sup_Phone
+            // 
+            this.sup_Phone.HeaderText = "Phone";
+            this.sup_Phone.Name = "sup_Phone";
+            this.sup_Phone.Width = 80;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label30);
@@ -1179,6 +1262,23 @@ namespace warehouse_storage_system
             this.clientsGridView.Size = new System.Drawing.Size(270, 211);
             this.clientsGridView.TabIndex = 42;
             this.clientsGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientsGridView_RowHeaderMouseClick);
+            // 
+            // client_ID
+            // 
+            this.client_ID.HeaderText = "ID";
+            this.client_ID.Name = "client_ID";
+            this.client_ID.Width = 50;
+            // 
+            // client_Name
+            // 
+            this.client_Name.HeaderText = "Name";
+            this.client_Name.Name = "client_Name";
+            // 
+            // client_phone
+            // 
+            this.client_phone.HeaderText = "Phone";
+            this.client_phone.Name = "client_phone";
+            this.client_phone.Width = 80;
             // 
             // tabPage5
             // 
@@ -1669,73 +1769,6 @@ namespace warehouse_storage_system
             this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Prod_name
-            // 
-            this.Prod_name.HeaderText = "Name";
-            this.Prod_name.Name = "Prod_name";
-            // 
-            // store
-            // 
-            this.store.HeaderText = "store";
-            this.store.Name = "store";
-            this.store.Width = 50;
-            // 
-            // sup_ID
-            // 
-            this.sup_ID.HeaderText = "ID";
-            this.sup_ID.Name = "sup_ID";
-            this.sup_ID.Width = 50;
-            // 
-            // sup_Name
-            // 
-            this.sup_Name.HeaderText = "Name";
-            this.sup_Name.Name = "sup_Name";
-            // 
-            // sup_Phone
-            // 
-            this.sup_Phone.HeaderText = "Phone";
-            this.sup_Phone.Name = "sup_Phone";
-            this.sup_Phone.Width = 80;
-            // 
-            // client_ID
-            // 
-            this.client_ID.HeaderText = "ID";
-            this.client_ID.Name = "client_ID";
-            this.client_ID.Width = 50;
-            // 
-            // client_Name
-            // 
-            this.client_Name.HeaderText = "Name";
-            this.client_Name.Name = "client_Name";
-            // 
-            // client_phone
-            // 
-            this.client_phone.HeaderText = "Phone";
-            this.client_phone.Name = "client_phone";
-            this.client_phone.Width = 80;
-            // 
-            // PROD_id
-            // 
-            this.PROD_id.HeaderText = "ID";
-            this.PROD_id.Name = "PROD_id";
-            this.PROD_id.Width = 50;
-            // 
-            // prod_namee
-            // 
-            this.prod_namee.HeaderText = "name";
-            this.prod_namee.Name = "prod_namee";
-            // 
-            // expire_period
-            // 
-            this.expire_period.HeaderText = "expire period";
-            this.expire_period.Name = "expire_period";
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1757,8 +1790,8 @@ namespace warehouse_storage_system
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_p)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).EndInit();
@@ -1800,44 +1833,6 @@ namespace warehouse_storage_system
         private System.Windows.Forms.TextBox storeAddressTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox storeNameTextBox;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox prodNameTextBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox prodIDTextBox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView productsGridView_p;
-        private System.Windows.Forms.Button insertProductBtn;
-        private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.Button deleteProductBtn;
-        private System.Windows.Forms.Button updateProductBtn;
-        private System.Windows.Forms.ComboBox prodStoreComboBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox prodQuantityTextBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox prodExpPerTextBox;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DataGridView toStoreGridView;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox prodNameComboBox;
-        private System.Windows.Forms.ComboBox prodExpPerComboBox;
-        private System.Windows.Forms.ComboBox prodProdDateComboBox;
-        private System.Windows.Forms.ComboBox prodIDComboBox;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox reqQuantityTextBox;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView fromStoreGridView;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox availableQuantityTextBox;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox supPhoneTextBox;
         private System.Windows.Forms.Label label27;
@@ -1926,7 +1921,6 @@ namespace warehouse_storage_system
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.ComboBox prodProductionDateComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn keeper;
@@ -1939,9 +1933,50 @@ namespace warehouse_storage_system
         private System.Windows.Forms.DataGridViewTextBoxColumn client_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn client_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn client_phone;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button updateProductBtn;
+        private System.Windows.Forms.Button insertProductBtn;
+        private System.Windows.Forms.ComboBox prodProductionDateComboBox;
+        private System.Windows.Forms.Button deleteProductBtn;
+        private System.Windows.Forms.ComboBox prodStoreComboBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox prodQuantityTextBox;
+        private System.Windows.Forms.TextBox prodExpPerTextBox;
+        private System.Windows.Forms.TextBox prodNameTextBox;
+        private System.Windows.Forms.TextBox prodIDTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView productsGridView_p;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROD_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn prod_namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn expire_period;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox availableQuantityTextBox;
+        private System.Windows.Forms.TextBox reqQuantityTextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridView toStoreGridView;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox prodNameComboBox;
+        private System.Windows.Forms.ComboBox prodProdDateComboBox;
+        private System.Windows.Forms.ComboBox prodIDComboBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button moveProductBtn;
+        private System.Windows.Forms.DataGridView fromStoreGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn storetoName;
+        private System.Windows.Forms.TextBox prodExpPeriodTextBox;
     }
 }
 
