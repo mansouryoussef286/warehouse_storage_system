@@ -13,10 +13,10 @@ namespace warehouse_storage_system
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class warehouseDBEntities : DbContext
+    public partial class warehouseDBEntities1 : DbContext
     {
-        public warehouseDBEntities()
-            : base("name=warehouseDBEntities")
+        public warehouseDBEntities1()
+            : base("name=warehouseDBEntities1")
         {
         }
     
@@ -30,12 +30,12 @@ namespace warehouse_storage_system
         public virtual DbSet<client> clients { get; set; }
         public virtual DbSet<product_stores> product_stores { get; set; }
         public virtual DbSet<product> products { get; set; }
+        public virtual DbSet<products_movement> products_movement { get; set; }
         public virtual DbSet<products_units> products_units { get; set; }
         public virtual DbSet<store> stores { get; set; }
         public virtual DbSet<supplier_requests> supplier_requests { get; set; }
         public virtual DbSet<supplierRequest_details> supplierRequest_details { get; set; }
         public virtual DbSet<supplier> suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<products_movement> products_movement { get; set; }
     }
 }

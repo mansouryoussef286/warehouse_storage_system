@@ -18,9 +18,11 @@ namespace warehouse_storage_system
         public int product_ID { get; set; }
         public string store_name { get; set; }
         public int output_quantity { get; set; }
+        public System.DateTime production_date { get; set; }
     
         public virtual client_requests client_requests { get; set; }
         public virtual product product { get; set; }
         public virtual store store { get; set; }
+        public virtual product_stores product_stores { get; set; }
     }
 }

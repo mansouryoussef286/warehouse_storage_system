@@ -14,13 +14,12 @@ namespace warehouse_storage_system
     {
         //application variables
         ConfirmDialog confirmDlg;   //delete confirmation box
-        warehouseDBEntities entities;
+        warehouseDBEntities1 entities;
 
         public MainApp()
         {
             InitializeComponent();
-            confirmDlg = new ConfirmDialog("this store?");
-            entities = new warehouseDBEntities();
+            entities = new warehouseDBEntities1();
         }
 
         private void MainApp_Load(object sender, EventArgs e)
@@ -30,6 +29,8 @@ namespace warehouse_storage_system
             fillClientsGridView();
             fillProductsGridView();
             fillFromToStoresGridView();
+            fillInRequestsGridView();
+            fillOutRequestsGridView();
         }
 
         #region stores tab
@@ -83,6 +84,7 @@ namespace warehouse_storage_system
 
         private void deleteStoreBtn_Click(object sender, EventArgs e)
         {
+            confirmDlg = new ConfirmDialog("Are you sure to delete\nthis store?");
             DialogResult res = confirmDlg.ShowDialog();
             if (res == DialogResult.OK)
             {
@@ -94,6 +96,7 @@ namespace warehouse_storage_system
                 MessageBox.Show("deleted");
 
             }
+            fillInRequestsGridView();
         }
 
 
@@ -116,6 +119,7 @@ namespace warehouse_storage_system
                     MessageBox.Show("please select one store");
                 }
                 MessageBox.Show("updated successfully!");
+                fillInRequestsGridView();
             }
             catch
             {
@@ -132,6 +136,7 @@ namespace warehouse_storage_system
             entities.stores.Add(newStore);
             entities.SaveChanges();
             fillStoresGridView();
+            fillInRequestsGridView();
         }
         #endregion
 
@@ -206,6 +211,7 @@ namespace warehouse_storage_system
 
         private void supDeleteBtn_Click(object sender, EventArgs e)
         {
+            confirmDlg = new ConfirmDialog("Are you sure to delete\nthis supplier?");
             DialogResult res = confirmDlg.ShowDialog();
             if (res == DialogResult.OK)
             {
@@ -290,6 +296,7 @@ namespace warehouse_storage_system
 
         private void clientDeleteBtn_Click(object sender, EventArgs e)
         {
+            confirmDlg = new ConfirmDialog("Are you sure to delete\nthis client?");
             DialogResult res = confirmDlg.ShowDialog();
             if (res == DialogResult.OK)
             {
@@ -455,8 +462,6 @@ namespace warehouse_storage_system
             }
         }
 
-        #endregion
-
         private void fromStoreGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string storeName = fromStoreGridView.SelectedRows[0].Cells[0].Value.ToString();
@@ -487,7 +492,6 @@ namespace warehouse_storage_system
                 prodNameComboBox.SelectedIndex = 0;
             }
         }
-
 
         private void prodIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -583,6 +587,389 @@ namespace warehouse_storage_system
                 MessageBox.Show("enter a numbered quantity");
             }
         }
+
+        #endregion
+
+        //*******************************************************************//
+        #region incoming requests tab
+        public void fillInRequestsGridView()
+        {
+            inRequestsGridView.Rows.Clear();
+            foreach (var InReq in entities.supplier_requests)
+            {
+                inRequestsGridView.Rows.Add(InReq.inRequest_ID, InReq.supplier.supplier_name, InReq.date);
+            }
+            inReqStoreName.Items.Clear();
+            foreach (var store in entities.stores)
+            {
+                inReqStoreName.Items.Add(store.store_name);
+            }
+        }
+
+        private void inRequestsGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int reqID= int.Parse(inRequestsGridView.SelectedRows[0].Cells[0].Value.ToString());
+            var request = entities.supplierRequest_details.Where(r => r.supplierRequest_ID == reqID)
+                .Select(r=>r).FirstOrDefault();
+            var inreqProducts = entities.supplierRequest_details.Where(r => r.supplierRequest_ID == reqID)
+                .Select(r => r);
+            //fill the products in that request
+            inReqProdGridView.Rows.Clear();
+            foreach (var prod in inreqProducts)
+            {
+                inReqProdGridView.Rows.Add(prod.product_ID, prod.product.product_name,prod.production_date , prod.input_quantity);
+            }
+            inReqID.Text = request.supplierRequest_ID.ToString();
+            inReqSupName.Text =request.supplier_requests.supplier.supplier_name;
+            inReqStoreName.Text = request.store_name;
+            inReqDate.Text =request.supplier_requests.date.ToString().Split(' ')[0];
+        }
+
+        private void inReqProdGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int reqID = int.Parse(inRequestsGridView.SelectedRows[0].Cells[0].Value.ToString());
+            int prodID = int.Parse(inReqProdGridView.SelectedRows[0].Cells[0].Value.ToString());
+            DateTime proDate = DateTime.Parse(inReqProdGridView.SelectedRows[0].Cells[2].Value.ToString());
+            var inProduct = entities.supplierRequest_details.Where(r => r.supplierRequest_ID == reqID && r.product_ID==prodID && r.production_date==proDate).Select(r => r).FirstOrDefault();
+            
+            inReqProdID.Text = prodID.ToString();
+            inReqProdDate.Text = inProduct.production_date.ToString().Split(' ')[0];
+            inReqExpPeriod.Text = inProduct.product.expire_period.ToString();
+            inReqQuantity.Text = inProduct.input_quantity.ToString();
+        }
+
+        private void inReqInsertBtn_Click(object sender, EventArgs e)
+        {
+            //get the request and product details
+            int reqID = int.Parse(inReqID.Text);
+            string storeName = inReqStoreName.SelectedItem.ToString();
+            DateTime date = DateTime.Parse(inReqDate.Text);
+
+            int prodID = int.Parse(inReqProdID.Text);
+            DateTime prodDate = DateTime.Parse(inReqProdDate.Text);
+            int quantity = int.Parse(inReqQuantity.Text);
+            
+            //check if the supplier exist in the warehouse system
+            var supID = entities.suppliers.Where(s => s.supplier_name == inReqSupName.Text)
+                .Select(s => s.supplier_ID).FirstOrDefault();
+            if (supID != 0)
+            {
+                //check if the product exist in the warehouse system
+                var product = entities.products.Where(p => p.product_ID == prodID)
+                    .Select(p => p).FirstOrDefault();
+                if(product != null)
+                {
+                    //check if the supplier request id is new
+                    var supplyrequest = entities.supplier_requests.Where(sr => sr.inRequest_ID == reqID)
+                        .Select(sr => sr).FirstOrDefault();
+                    if(supplyrequest == null)
+                    {
+                        //insert in supplier requests table
+                        supplier_requests inRequest = new supplier_requests();
+                        inRequest.inRequest_ID = reqID;
+                        inRequest.supplier_ID = supID;
+                        inRequest.date = date;
+                        entities.supplier_requests.Add(inRequest);
+                        entities.SaveChanges();
+                    }
+                    //else then the request exists
+                    //so just add the products in the request details table
+                  
+                    //insert in supplier-requests details table
+                    supplierRequest_details inRequestDetails = new supplierRequest_details();
+                    inRequestDetails.supplierRequest_ID = reqID;
+                    inRequestDetails.product_ID = prodID;
+                    inRequestDetails.store_name = storeName;
+                    inRequestDetails.input_quantity = quantity;
+                    inRequestDetails.production_date = prodDate;
+                    entities.supplierRequest_details.Add(inRequestDetails);
+
+                    //update the product stores table with the incoming quantity
+                    var productStore = entities.product_stores.Where(ps => ps.product_ID == prodID && ps.store_name == storeName && ps.production_date == prodDate)
+                        .Select(ps => ps).FirstOrDefault();
+                    //check if the product exists in that store
+                    if (productStore == null)
+                    {
+                        product_stores ps = new product_stores();
+                        ps.product_ID = prodID;
+                        ps.store_name = storeName;
+                        ps.production_date = prodDate;
+                        ps.quantity = 0;
+                        entities.product_stores.Add(ps);
+                        productStore = ps;
+                    }
+                    productStore.quantity += quantity;
+                    entities.SaveChanges();
+                    MainApp_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("this product doesn't exist");
+                    //adjust the if to == null
+                    //then add the product in the products table
+                    //and continue with the same code
+                }
+            }
+            else
+            {
+                MessageBox.Show("this supplier doesn't exist");
+            }
+        }
+
+        private void inReqUpdateBtn_Click(object sender, EventArgs e)
+        {
+            confirmDlg = new ConfirmDialog("Are you sure to Update\nthis request?");
+            DialogResult res = confirmDlg.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                if (inReqID.Text != null && inReqStoreName.SelectedItem.ToString() != null && inReqProdID.Text != null && inReqProdDate.Text != null && inReqQuantity.Text != null)
+                {
+                    int reqID = int.Parse(inReqID.Text);
+                    string storeName = inReqStoreName.SelectedItem.ToString();
+                    DateTime date = DateTime.Parse(inReqDate.Text);
+
+                    int prodID = int.Parse(inReqProdID.Text);
+                    DateTime prodDate = DateTime.Parse(inReqProdDate.Text);
+                    int quantity = int.Parse(inReqQuantity.Text);
+
+                    //get the old quantity
+                    var oldQuantity = entities.supplierRequest_details
+                        .Where(sr => sr.supplierRequest_ID == reqID && sr.product_ID == prodID && sr.store_name == storeName && sr.production_date == prodDate)
+                            .Select(ps => ps.input_quantity).FirstOrDefault();
+                    //get the supplier id from his name
+                    var supID = entities.suppliers.Where(s => s.supplier_name == inReqSupName.Text)
+                    .Select(s => s.supplier_ID).FirstOrDefault();
+                    //get the supply request
+                    var supplyrequest = entities.supplier_requests.Where(sr => sr.inRequest_ID == reqID)
+                            .Select(sr => sr).FirstOrDefault();
+                    //get the supply request details to edit the quantity
+                    var supplyrequestDetails = entities.supplierRequest_details
+                        .Where(sr => sr.supplierRequest_ID == reqID && sr.product_ID == prodID && sr.store_name == storeName && sr.production_date == prodDate)
+                            .Select(ps => ps).FirstOrDefault();
+
+                    if (supID != 0)
+                    {
+                        //update the supply request table
+                        supplyrequest.supplier_ID = supID;
+                        supplyrequest.date = date;
+                        //update the supply request details table
+                        supplyrequestDetails.input_quantity = quantity;
+
+                        //update the product stores table with the updated quantity
+                        var productStore = entities.product_stores.Where(ps => ps.product_ID == prodID && ps.store_name == storeName && ps.production_date == prodDate)
+                            .Select(ps => ps).FirstOrDefault();
+                        //check if the product exists in that store
+                        if (productStore != null)
+                        {
+                            productStore.quantity = productStore.quantity + quantity - oldQuantity;
+                            entities.SaveChanges();
+                        }
+                        MainApp_Load(null, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("this supplier doesn't exist");
+                    }
+                }
+            }
+        }
+        
+        #endregion
+
+        //*******************************************************************//
+        #region incoming requests tab
+
+        public void fillOutRequestsGridView()
+        {
+
+            outRequestsGridView.Rows.Clear();
+            foreach (var outReq in entities.client_requests)
+            {
+                outRequestsGridView.Rows.Add(outReq.outRequest_ID, outReq.client.client_name, outReq.date);
+            }
+            outReqStoreName.Items.Clear();
+            foreach (var store in entities.stores)
+            {
+                outReqStoreName.Items.Add(store.store_name);
+            }
+        }
+
+        private void outRequestsGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int reqID = int.Parse(outRequestsGridView.SelectedRows[0].Cells[0].Value.ToString());
+            var request = entities.clientRequest_details.Where(r => r.clientRequets_ID == reqID)
+                .Select(r => r).FirstOrDefault();
+            var outReqProducts = entities.clientRequest_details.Where(r => r.clientRequets_ID == reqID)
+                .Select(r => r);
+            //fill the products in that request
+            outReqProdGridView.Rows.Clear();
+            foreach (var prod in outReqProducts)
+            {
+                outReqProdGridView.Rows.Add(prod.product_ID, prod.product.product_name, prod.production_date, prod.output_quantity);
+            }
+            outReqID.Text = request.clientRequets_ID.ToString();
+            outReqClientName.Text = request.client_requests.client.client_name;
+            outReqStoreName.Text = request.store_name;
+            outReqDate.Text = request.client_requests.date.ToString().Split(' ')[0];
+        }
+
+        private void outReqProdGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int reqID = int.Parse(outRequestsGridView.SelectedRows[0].Cells[0].Value.ToString());
+            int prodID = int.Parse(outReqProdGridView.SelectedRows[0].Cells[0].Value.ToString());
+            DateTime proDate = DateTime.Parse(outReqProdGridView.SelectedRows[0].Cells[2].Value.ToString());
+            var outProduct = entities.clientRequest_details.Where(r => r.clientRequets_ID == reqID && r.product_ID == prodID && r.production_date == proDate).Select(r => r).FirstOrDefault();
+
+            outReqProdID.Text = prodID.ToString();
+            outReqProdDate.Text = outProduct.production_date.ToString().Split(' ')[0];
+            outReqExpPeriod.Text = outProduct.product.expire_period.ToString();
+            outReqQuantity.Text = outProduct.output_quantity.ToString();
+        }
+
+        private void outReqInsertBtn_Click(object sender, EventArgs e)
+        {
+            //get the request and product details
+            int reqID = int.Parse(outReqID.Text);
+            string storeName = outReqStoreName.SelectedItem.ToString();
+            DateTime date = DateTime.Parse(outReqDate.Text);
+
+            int prodID = int.Parse(outReqProdID.Text);
+            DateTime prodDate = DateTime.Parse(outReqProdDate.Text);
+            int quantity = int.Parse(outReqQuantity.Text);
+
+            //check if the client exist in the warehouse system
+            var clientID = entities.clients.Where(c => c.client_name == outReqClientName.Text)
+                .Select(c => c.client_ID).FirstOrDefault();
+
+            if (clientID != 0)
+            {
+                //check if the product exist in the warehouse system
+                var product = entities.products.Where(p => p.product_ID == prodID)
+                    .Select(p => p).FirstOrDefault();
+                if (product != null)
+                {
+                    //check if the product exists in that store
+                    var productStore = entities.product_stores.Where(ps => ps.product_ID == prodID && ps.store_name == storeName && ps.production_date == prodDate)
+                       .Select(ps => ps).FirstOrDefault();
+                    if (productStore != null)
+                    {
+                        //check if the available quantity is more than the required quantity
+                        if (productStore.quantity >= quantity)
+                        {
+                            //check if the client request id is new
+                            var purchaseRequest = entities.client_requests.Where(cr => cr.outRequest_ID == reqID)
+                                .Select(sr => sr).FirstOrDefault();
+                            if (purchaseRequest == null)
+                            {
+                                //insert in client requests table
+                                client_requests outRequest = new client_requests();
+                                outRequest.outRequest_ID = reqID;
+                                outRequest.client_ID = clientID;
+                                outRequest.date = date;
+                                entities.client_requests.Add(outRequest);
+                                entities.SaveChanges();
+                            }
+                            //else then the request exists
+                            //so just add the products in the request details table
+
+                            //insert in clients-requests details table
+                            clientRequest_details outRequestDetails = new clientRequest_details();
+                            outRequestDetails.clientRequets_ID = reqID;
+                            outRequestDetails.product_ID = prodID;
+                            outRequestDetails.store_name = storeName;
+                            outRequestDetails.output_quantity = quantity;
+                            outRequestDetails.production_date = prodDate;
+                            entities.clientRequest_details.Add(outRequestDetails);
+
+                            //update the product stores table with the incoming quantity
+                            productStore.quantity -= quantity;
+                            entities.SaveChanges();
+                            MainApp_Load(null, null);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"the rquired quantity isn't available!\n only {productStore.quantity} left in store");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"the rquired product isn't available!\n in {productStore.store_name} store");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("this product doesn't exist");
+                    //adjust the if to == null
+                    //then add the product in the products table
+                    //and continue with the same code
+                }
+            }
+            else
+            {
+                MessageBox.Show("this supplier doesn't exist");
+            }
+        }
+
+        private void outReqUpdateBtn_Click(object sender, EventArgs e)
+        {
+            confirmDlg = new ConfirmDialog("Are you sure to Update\nthis request?");
+            DialogResult res = confirmDlg.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                if (outReqID.Text != null && outReqStoreName.SelectedItem.ToString() != null && outReqProdID.Text != null && outReqProdDate.Text != null && outReqQuantity.Text != null)
+                {
+                    int reqID = int.Parse(outReqID.Text);
+                    string storeName = outReqStoreName.SelectedItem.ToString();
+                    DateTime date = DateTime.Parse(outReqDate.Text);
+
+                    int prodID = int.Parse(outReqProdID.Text);
+                    DateTime prodDate = DateTime.Parse(outReqProdDate.Text);
+                    int quantity = int.Parse(outReqQuantity.Text);
+
+                    //get the old quantity
+                    var oldQuantity = entities.clientRequest_details
+                        .Where(cr => cr.clientRequets_ID == reqID && cr.product_ID == prodID && cr.store_name == storeName && cr.production_date == prodDate)
+                            .Select(ps => ps.output_quantity).FirstOrDefault();
+                    //get the client id from his name
+                    var clientID = entities.clients.Where(c => c.client_name == outReqClientName.Text)
+                    .Select(c => c.client_ID).FirstOrDefault();
+                    //get the client request
+                    var clientRequest = entities.client_requests.Where(cr => cr.outRequest_ID == reqID)
+                            .Select(cr => cr).FirstOrDefault();
+                    //get the supply request details to edit the quantity
+                    var clientRequestDetails = entities.clientRequest_details
+                        .Where(cr => cr.clientRequets_ID == reqID && cr.product_ID == prodID && cr.store_name == storeName && cr.production_date == prodDate)
+                            .Select(ps => ps).FirstOrDefault();
+
+                    if (clientID != 0)
+                    {
+                        //update the client request table
+                        clientRequest.client_ID = clientID;
+                        clientRequest.date = date;
+                        //update the client request details table
+                        clientRequestDetails.output_quantity = quantity;
+
+                        //update the product stores table with the updated quantity
+                        var productStore = entities.product_stores.Where(ps => ps.product_ID == prodID && ps.store_name == storeName && ps.production_date == prodDate)
+                            .Select(ps => ps).FirstOrDefault();
+                        //check if the product exists in that store
+                        if (productStore != null)
+                        {
+                            productStore.quantity = productStore.quantity - quantity + oldQuantity;
+                            entities.SaveChanges();
+                        }
+                        MainApp_Load(null, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("this client doesn't exist");
+                    }
+                }
+            }
+        }
+
+        #endregion
+
     }
 
 }

@@ -19,9 +19,9 @@ namespace warehouse_storage_system
         {
             this.clientRequest_details = new HashSet<clientRequest_details>();
             this.product_stores = new HashSet<product_stores>();
-            this.supplierRequest_details = new HashSet<supplierRequest_details>();
             this.products_movement = new HashSet<products_movement>();
             this.products_movement1 = new HashSet<products_movement>();
+            this.supplierRequest_details = new HashSet<supplierRequest_details>();
         }
     
         public string store_name { get; set; }
@@ -33,10 +33,10 @@ namespace warehouse_storage_system
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product_stores> product_stores { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<supplierRequest_details> supplierRequest_details { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<products_movement> products_movement { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<products_movement> products_movement1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<supplierRequest_details> supplierRequest_details { get; set; }
     }
 }

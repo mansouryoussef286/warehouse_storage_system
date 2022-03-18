@@ -18,6 +18,8 @@ namespace warehouse_storage_system
         public product_stores()
         {
             this.products_movement = new HashSet<products_movement>();
+            this.clientRequest_details = new HashSet<clientRequest_details>();
+            this.supplierRequest_details = new HashSet<supplierRequest_details>();
         }
     
         public int product_ID { get; set; }
@@ -29,5 +31,9 @@ namespace warehouse_storage_system
         public virtual store store { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<products_movement> products_movement { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<clientRequest_details> clientRequest_details { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<supplierRequest_details> supplierRequest_details { get; set; }
     }
 }

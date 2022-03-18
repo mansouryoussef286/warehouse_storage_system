@@ -144,55 +144,73 @@ namespace warehouse_storage_system
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label57 = new System.Windows.Forms.Label();
+            this.inReqProdGridView = new System.Windows.Forms.DataGridView();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.inReqProdDate = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.inReqExpPeriod = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.inReqQuantity = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.inReqSupName = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.inReqDate = new System.Windows.Forms.TextBox();
+            this.inReqDeleteBtn = new System.Windows.Forms.Button();
+            this.inReqUpdateBtn = new System.Windows.Forms.Button();
+            this.inReqInsertBtn = new System.Windows.Forms.Button();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.inReqID = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.inReqProdID = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.inRequestsGridView = new System.Windows.Forms.DataGridView();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.outReqProdDate = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.outReqExpPeriod = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.outReqQuantity = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.outReqClientName = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.outReqDate = new System.Windows.Forms.TextBox();
+            this.outReqDeleteBtn = new System.Windows.Forms.Button();
+            this.outReqUpdateBtn = new System.Windows.Forms.Button();
+            this.outReqInsertBtn = new System.Windows.Forms.Button();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.outReqID = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.outReqProdID = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.outRequestsGridView = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.inReqStoreName = new System.Windows.Forms.ComboBox();
+            this.outReqProdGridView = new System.Windows.Forms.DataGridView();
+            this.outReqStoreName = new System.Windows.Forms.ComboBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.outreqidd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outreqsuppname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateeq2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outprodidd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outreqprodnamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodddateoutreq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quuuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inreq_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inreq_supID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_IDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_nameee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateee1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityyy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).BeginInit();
@@ -211,10 +229,12 @@ namespace warehouse_storage_system
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inReqProdGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inRequestsGridView)).BeginInit();
             this.tabPage10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outRequestsGridView)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.outReqProdGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1303,27 +1323,29 @@ namespace warehouse_storage_system
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.inReqStoreName);
+            this.tabPage9.Controls.Add(this.label57);
+            this.tabPage9.Controls.Add(this.inReqProdGridView);
             this.tabPage9.Controls.Add(this.label47);
-            this.tabPage9.Controls.Add(this.textBox22);
+            this.tabPage9.Controls.Add(this.inReqProdDate);
             this.tabPage9.Controls.Add(this.label48);
-            this.tabPage9.Controls.Add(this.textBox23);
+            this.tabPage9.Controls.Add(this.inReqExpPeriod);
             this.tabPage9.Controls.Add(this.label39);
-            this.tabPage9.Controls.Add(this.textBox15);
+            this.tabPage9.Controls.Add(this.inReqQuantity);
             this.tabPage9.Controls.Add(this.label41);
-            this.tabPage9.Controls.Add(this.textBox17);
+            this.tabPage9.Controls.Add(this.inReqSupName);
             this.tabPage9.Controls.Add(this.label42);
-            this.tabPage9.Controls.Add(this.textBox18);
-            this.tabPage9.Controls.Add(this.button13);
-            this.tabPage9.Controls.Add(this.button14);
-            this.tabPage9.Controls.Add(this.button15);
+            this.tabPage9.Controls.Add(this.inReqDate);
+            this.tabPage9.Controls.Add(this.inReqDeleteBtn);
+            this.tabPage9.Controls.Add(this.inReqUpdateBtn);
+            this.tabPage9.Controls.Add(this.inReqInsertBtn);
             this.tabPage9.Controls.Add(this.label43);
-            this.tabPage9.Controls.Add(this.textBox19);
+            this.tabPage9.Controls.Add(this.inReqID);
             this.tabPage9.Controls.Add(this.label44);
-            this.tabPage9.Controls.Add(this.textBox20);
+            this.tabPage9.Controls.Add(this.inReqProdID);
             this.tabPage9.Controls.Add(this.label45);
-            this.tabPage9.Controls.Add(this.textBox21);
             this.tabPage9.Controls.Add(this.label46);
-            this.tabPage9.Controls.Add(this.dataGridView3);
+            this.tabPage9.Controls.Add(this.inRequestsGridView);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -1332,202 +1354,229 @@ namespace warehouse_storage_system
             this.tabPage9.Text = "incoming request";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label57.Location = new System.Drawing.Point(252, 12);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(68, 17);
+            this.label57.TabIndex = 85;
+            this.label57.Text = "products:";
+            // 
+            // inReqProdGridView
+            // 
+            this.inReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prod_IDD,
+            this.prod_nameee,
+            this.dateee1,
+            this.quantityyy});
+            this.inReqProdGridView.Location = new System.Drawing.Point(255, 37);
+            this.inReqProdGridView.Name = "inReqProdGridView";
+            this.inReqProdGridView.Size = new System.Drawing.Size(191, 211);
+            this.inReqProdGridView.TabIndex = 84;
+            this.inReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.inReqProdGridView_RowHeaderMouseClick);
+            // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(484, 174);
+            this.label47.Location = new System.Drawing.Point(592, 174);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(83, 13);
             this.label47.TabIndex = 83;
             this.label47.Text = "production date";
             // 
-            // textBox22
+            // inReqProdDate
             // 
-            this.textBox22.Location = new System.Drawing.Point(484, 193);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(120, 20);
-            this.textBox22.TabIndex = 82;
+            this.inReqProdDate.Location = new System.Drawing.Point(592, 193);
+            this.inReqProdDate.Name = "inReqProdDate";
+            this.inReqProdDate.Size = new System.Drawing.Size(120, 20);
+            this.inReqProdDate.TabIndex = 82;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(484, 129);
+            this.label48.Location = new System.Drawing.Point(592, 129);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(70, 13);
             this.label48.TabIndex = 81;
             this.label48.Text = "expire period";
             // 
-            // textBox23
+            // inReqExpPeriod
             // 
-            this.textBox23.Location = new System.Drawing.Point(484, 148);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(120, 20);
-            this.textBox23.TabIndex = 80;
+            this.inReqExpPeriod.Location = new System.Drawing.Point(592, 148);
+            this.inReqExpPeriod.Name = "inReqExpPeriod";
+            this.inReqExpPeriod.Size = new System.Drawing.Size(120, 20);
+            this.inReqExpPeriod.TabIndex = 80;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(484, 86);
+            this.label39.Location = new System.Drawing.Point(592, 86);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(47, 13);
             this.label39.TabIndex = 79;
             this.label39.Text = "quantity";
             // 
-            // textBox15
+            // inReqQuantity
             // 
-            this.textBox15.Location = new System.Drawing.Point(484, 105);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(120, 20);
-            this.textBox15.TabIndex = 78;
+            this.inReqQuantity.Location = new System.Drawing.Point(592, 105);
+            this.inReqQuantity.Name = "inReqQuantity";
+            this.inReqQuantity.Size = new System.Drawing.Size(120, 20);
+            this.inReqQuantity.TabIndex = 78;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(344, 129);
+            this.label41.Location = new System.Drawing.Point(452, 129);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(73, 13);
             this.label41.TabIndex = 75;
             this.label41.Text = "supplier name";
             // 
-            // textBox17
+            // inReqSupName
             // 
-            this.textBox17.Location = new System.Drawing.Point(344, 148);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(120, 20);
-            this.textBox17.TabIndex = 74;
+            this.inReqSupName.Location = new System.Drawing.Point(452, 148);
+            this.inReqSupName.Name = "inReqSupName";
+            this.inReqSupName.Size = new System.Drawing.Size(120, 20);
+            this.inReqSupName.TabIndex = 74;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(344, 174);
+            this.label42.Location = new System.Drawing.Point(452, 174);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(69, 13);
             this.label42.TabIndex = 73;
             this.label42.Text = "request date";
             // 
-            // textBox18
+            // inReqDate
             // 
-            this.textBox18.Location = new System.Drawing.Point(344, 193);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(120, 20);
-            this.textBox18.TabIndex = 72;
+            this.inReqDate.Location = new System.Drawing.Point(452, 193);
+            this.inReqDate.Name = "inReqDate";
+            this.inReqDate.Size = new System.Drawing.Size(120, 20);
+            this.inReqDate.TabIndex = 72;
             // 
-            // button13
+            // inReqDeleteBtn
             // 
-            this.button13.Location = new System.Drawing.Point(533, 225);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(71, 23);
-            this.button13.TabIndex = 71;
-            this.button13.Text = "delete";
-            this.button13.UseVisualStyleBackColor = true;
+            this.inReqDeleteBtn.Location = new System.Drawing.Point(641, 225);
+            this.inReqDeleteBtn.Name = "inReqDeleteBtn";
+            this.inReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
+            this.inReqDeleteBtn.TabIndex = 71;
+            this.inReqDeleteBtn.Text = "delete";
+            this.inReqDeleteBtn.UseVisualStyleBackColor = true;
+            this.inReqDeleteBtn.Visible = false;
             // 
-            // button14
+            // inReqUpdateBtn
             // 
-            this.button14.Location = new System.Drawing.Point(438, 225);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(71, 23);
-            this.button14.TabIndex = 70;
-            this.button14.Text = "update";
-            this.button14.UseVisualStyleBackColor = true;
+            this.inReqUpdateBtn.Location = new System.Drawing.Point(546, 225);
+            this.inReqUpdateBtn.Name = "inReqUpdateBtn";
+            this.inReqUpdateBtn.Size = new System.Drawing.Size(71, 23);
+            this.inReqUpdateBtn.TabIndex = 70;
+            this.inReqUpdateBtn.Text = "update";
+            this.inReqUpdateBtn.UseVisualStyleBackColor = true;
+            this.inReqUpdateBtn.Click += new System.EventHandler(this.inReqUpdateBtn_Click);
             // 
-            // button15
+            // inReqInsertBtn
             // 
-            this.button15.Location = new System.Drawing.Point(342, 225);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(71, 23);
-            this.button15.TabIndex = 69;
-            this.button15.Text = "insert";
-            this.button15.UseVisualStyleBackColor = true;
+            this.inReqInsertBtn.Location = new System.Drawing.Point(450, 225);
+            this.inReqInsertBtn.Name = "inReqInsertBtn";
+            this.inReqInsertBtn.Size = new System.Drawing.Size(71, 23);
+            this.inReqInsertBtn.TabIndex = 69;
+            this.inReqInsertBtn.Text = "insert";
+            this.inReqInsertBtn.UseVisualStyleBackColor = true;
+            this.inReqInsertBtn.Click += new System.EventHandler(this.inReqInsertBtn_Click);
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(344, 41);
+            this.label43.Location = new System.Drawing.Point(452, 41);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(58, 13);
             this.label43.TabIndex = 68;
             this.label43.Text = "request ID";
             // 
-            // textBox19
+            // inReqID
             // 
-            this.textBox19.Location = new System.Drawing.Point(344, 60);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(120, 20);
-            this.textBox19.TabIndex = 67;
+            this.inReqID.Location = new System.Drawing.Point(452, 60);
+            this.inReqID.Name = "inReqID";
+            this.inReqID.Size = new System.Drawing.Size(120, 20);
+            this.inReqID.TabIndex = 67;
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(484, 41);
+            this.label44.Location = new System.Drawing.Point(592, 41);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(58, 13);
             this.label44.TabIndex = 66;
             this.label44.Text = "product ID";
             // 
-            // textBox20
+            // inReqProdID
             // 
-            this.textBox20.Location = new System.Drawing.Point(484, 60);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(120, 20);
-            this.textBox20.TabIndex = 65;
+            this.inReqProdID.Location = new System.Drawing.Point(592, 60);
+            this.inReqProdID.Name = "inReqProdID";
+            this.inReqProdID.Size = new System.Drawing.Size(120, 20);
+            this.inReqProdID.TabIndex = 65;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(344, 86);
+            this.label45.Location = new System.Drawing.Point(452, 86);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(61, 13);
             this.label45.TabIndex = 64;
             this.label45.Text = "store name";
             // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(344, 105);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(120, 20);
-            this.textBox21.TabIndex = 63;
-            // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label46.Location = new System.Drawing.Point(65, 12);
+            this.label46.Location = new System.Drawing.Point(6, 12);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(130, 17);
             this.label46.TabIndex = 62;
             this.label46.Text = "Incoming Requests:";
             // 
-            // dataGridView3
+            // inRequestsGridView
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(68, 37);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(240, 211);
-            this.dataGridView3.TabIndex = 61;
+            this.inRequestsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inRequestsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Inreq_ID,
+            this.Inreq_supID,
+            this.dateee});
+            this.inRequestsGridView.Location = new System.Drawing.Point(9, 37);
+            this.inRequestsGridView.Name = "inRequestsGridView";
+            this.inRequestsGridView.Size = new System.Drawing.Size(240, 211);
+            this.inRequestsGridView.TabIndex = 61;
+            this.inRequestsGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.inRequestsGridView_RowHeaderMouseClick);
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.label58);
+            this.tabPage10.Controls.Add(this.outReqStoreName);
+            this.tabPage10.Controls.Add(this.outReqProdGridView);
             this.tabPage10.Controls.Add(this.label40);
-            this.tabPage10.Controls.Add(this.textBox16);
+            this.tabPage10.Controls.Add(this.outReqProdDate);
             this.tabPage10.Controls.Add(this.label49);
-            this.tabPage10.Controls.Add(this.textBox24);
+            this.tabPage10.Controls.Add(this.outReqExpPeriod);
             this.tabPage10.Controls.Add(this.label50);
-            this.tabPage10.Controls.Add(this.textBox25);
+            this.tabPage10.Controls.Add(this.outReqQuantity);
             this.tabPage10.Controls.Add(this.label51);
-            this.tabPage10.Controls.Add(this.textBox26);
+            this.tabPage10.Controls.Add(this.outReqClientName);
             this.tabPage10.Controls.Add(this.label52);
-            this.tabPage10.Controls.Add(this.textBox27);
-            this.tabPage10.Controls.Add(this.button16);
-            this.tabPage10.Controls.Add(this.button17);
-            this.tabPage10.Controls.Add(this.button18);
+            this.tabPage10.Controls.Add(this.outReqDate);
+            this.tabPage10.Controls.Add(this.outReqDeleteBtn);
+            this.tabPage10.Controls.Add(this.outReqUpdateBtn);
+            this.tabPage10.Controls.Add(this.outReqInsertBtn);
             this.tabPage10.Controls.Add(this.label53);
-            this.tabPage10.Controls.Add(this.textBox28);
+            this.tabPage10.Controls.Add(this.outReqID);
             this.tabPage10.Controls.Add(this.label54);
-            this.tabPage10.Controls.Add(this.textBox29);
+            this.tabPage10.Controls.Add(this.outReqProdID);
             this.tabPage10.Controls.Add(this.label55);
-            this.tabPage10.Controls.Add(this.textBox30);
             this.tabPage10.Controls.Add(this.label56);
-            this.tabPage10.Controls.Add(this.dataGridView4);
+            this.tabPage10.Controls.Add(this.outRequestsGridView);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
@@ -1539,175 +1588,176 @@ namespace warehouse_storage_system
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(484, 174);
+            this.label40.Location = new System.Drawing.Point(592, 174);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(83, 13);
             this.label40.TabIndex = 104;
             this.label40.Text = "production date";
             // 
-            // textBox16
+            // outReqProdDate
             // 
-            this.textBox16.Location = new System.Drawing.Point(484, 193);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(120, 20);
-            this.textBox16.TabIndex = 103;
+            this.outReqProdDate.Location = new System.Drawing.Point(592, 193);
+            this.outReqProdDate.Name = "outReqProdDate";
+            this.outReqProdDate.Size = new System.Drawing.Size(120, 20);
+            this.outReqProdDate.TabIndex = 103;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(484, 129);
+            this.label49.Location = new System.Drawing.Point(592, 129);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(70, 13);
             this.label49.TabIndex = 102;
             this.label49.Text = "expire period";
             // 
-            // textBox24
+            // outReqExpPeriod
             // 
-            this.textBox24.Location = new System.Drawing.Point(484, 148);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(120, 20);
-            this.textBox24.TabIndex = 101;
+            this.outReqExpPeriod.Location = new System.Drawing.Point(592, 148);
+            this.outReqExpPeriod.Name = "outReqExpPeriod";
+            this.outReqExpPeriod.Size = new System.Drawing.Size(120, 20);
+            this.outReqExpPeriod.TabIndex = 101;
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(484, 86);
+            this.label50.Location = new System.Drawing.Point(592, 86);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(47, 13);
             this.label50.TabIndex = 100;
             this.label50.Text = "quantity";
             // 
-            // textBox25
+            // outReqQuantity
             // 
-            this.textBox25.Location = new System.Drawing.Point(484, 105);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(120, 20);
-            this.textBox25.TabIndex = 99;
+            this.outReqQuantity.Location = new System.Drawing.Point(592, 105);
+            this.outReqQuantity.Name = "outReqQuantity";
+            this.outReqQuantity.Size = new System.Drawing.Size(120, 20);
+            this.outReqQuantity.TabIndex = 99;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(344, 129);
+            this.label51.Location = new System.Drawing.Point(452, 129);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(73, 13);
+            this.label51.Size = new System.Drawing.Size(61, 13);
             this.label51.TabIndex = 98;
-            this.label51.Text = "supplier name";
+            this.label51.Text = "client name";
             // 
-            // textBox26
+            // outReqClientName
             // 
-            this.textBox26.Location = new System.Drawing.Point(344, 148);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(120, 20);
-            this.textBox26.TabIndex = 97;
+            this.outReqClientName.Location = new System.Drawing.Point(452, 148);
+            this.outReqClientName.Name = "outReqClientName";
+            this.outReqClientName.Size = new System.Drawing.Size(120, 20);
+            this.outReqClientName.TabIndex = 97;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(344, 174);
+            this.label52.Location = new System.Drawing.Point(452, 174);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(69, 13);
             this.label52.TabIndex = 96;
             this.label52.Text = "request date";
             // 
-            // textBox27
+            // outReqDate
             // 
-            this.textBox27.Location = new System.Drawing.Point(344, 193);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(120, 20);
-            this.textBox27.TabIndex = 95;
+            this.outReqDate.Location = new System.Drawing.Point(452, 193);
+            this.outReqDate.Name = "outReqDate";
+            this.outReqDate.Size = new System.Drawing.Size(120, 20);
+            this.outReqDate.TabIndex = 95;
             // 
-            // button16
+            // outReqDeleteBtn
             // 
-            this.button16.Location = new System.Drawing.Point(533, 225);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(71, 23);
-            this.button16.TabIndex = 94;
-            this.button16.Text = "delete";
-            this.button16.UseVisualStyleBackColor = true;
+            this.outReqDeleteBtn.Location = new System.Drawing.Point(641, 225);
+            this.outReqDeleteBtn.Name = "outReqDeleteBtn";
+            this.outReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
+            this.outReqDeleteBtn.TabIndex = 94;
+            this.outReqDeleteBtn.Text = "delete";
+            this.outReqDeleteBtn.UseVisualStyleBackColor = true;
+            this.outReqDeleteBtn.Visible = false;
             // 
-            // button17
+            // outReqUpdateBtn
             // 
-            this.button17.Location = new System.Drawing.Point(438, 225);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(71, 23);
-            this.button17.TabIndex = 93;
-            this.button17.Text = "update";
-            this.button17.UseVisualStyleBackColor = true;
+            this.outReqUpdateBtn.Location = new System.Drawing.Point(546, 225);
+            this.outReqUpdateBtn.Name = "outReqUpdateBtn";
+            this.outReqUpdateBtn.Size = new System.Drawing.Size(71, 23);
+            this.outReqUpdateBtn.TabIndex = 93;
+            this.outReqUpdateBtn.Text = "update";
+            this.outReqUpdateBtn.UseVisualStyleBackColor = true;
+            this.outReqUpdateBtn.Click += new System.EventHandler(this.outReqUpdateBtn_Click);
             // 
-            // button18
+            // outReqInsertBtn
             // 
-            this.button18.Location = new System.Drawing.Point(342, 225);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(71, 23);
-            this.button18.TabIndex = 92;
-            this.button18.Text = "insert";
-            this.button18.UseVisualStyleBackColor = true;
+            this.outReqInsertBtn.Location = new System.Drawing.Point(450, 225);
+            this.outReqInsertBtn.Name = "outReqInsertBtn";
+            this.outReqInsertBtn.Size = new System.Drawing.Size(71, 23);
+            this.outReqInsertBtn.TabIndex = 92;
+            this.outReqInsertBtn.Text = "insert";
+            this.outReqInsertBtn.UseVisualStyleBackColor = true;
+            this.outReqInsertBtn.Click += new System.EventHandler(this.outReqInsertBtn_Click);
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(344, 41);
+            this.label53.Location = new System.Drawing.Point(452, 41);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(58, 13);
             this.label53.TabIndex = 91;
             this.label53.Text = "request ID";
             // 
-            // textBox28
+            // outReqID
             // 
-            this.textBox28.Location = new System.Drawing.Point(344, 60);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(120, 20);
-            this.textBox28.TabIndex = 90;
+            this.outReqID.Location = new System.Drawing.Point(452, 60);
+            this.outReqID.Name = "outReqID";
+            this.outReqID.Size = new System.Drawing.Size(120, 20);
+            this.outReqID.TabIndex = 90;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(484, 41);
+            this.label54.Location = new System.Drawing.Point(592, 41);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(58, 13);
             this.label54.TabIndex = 89;
             this.label54.Text = "product ID";
             // 
-            // textBox29
+            // outReqProdID
             // 
-            this.textBox29.Location = new System.Drawing.Point(484, 60);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(120, 20);
-            this.textBox29.TabIndex = 88;
+            this.outReqProdID.Location = new System.Drawing.Point(592, 60);
+            this.outReqProdID.Name = "outReqProdID";
+            this.outReqProdID.Size = new System.Drawing.Size(120, 20);
+            this.outReqProdID.TabIndex = 88;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(344, 86);
+            this.label55.Location = new System.Drawing.Point(452, 86);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(61, 13);
             this.label55.TabIndex = 87;
             this.label55.Text = "store name";
             // 
-            // textBox30
-            // 
-            this.textBox30.Location = new System.Drawing.Point(344, 105);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(120, 20);
-            this.textBox30.TabIndex = 86;
-            // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label56.Location = new System.Drawing.Point(65, 12);
+            this.label56.Location = new System.Drawing.Point(6, 12);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(130, 17);
             this.label56.TabIndex = 85;
             this.label56.Text = "Outgoing Requests:";
             // 
-            // dataGridView4
+            // outRequestsGridView
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(68, 37);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(240, 211);
-            this.dataGridView4.TabIndex = 84;
+            this.outRequestsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.outRequestsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.outreqidd,
+            this.outreqsuppname,
+            this.dateeq2});
+            this.outRequestsGridView.Location = new System.Drawing.Point(9, 37);
+            this.outRequestsGridView.Name = "outRequestsGridView";
+            this.outRequestsGridView.Size = new System.Drawing.Size(240, 211);
+            this.outRequestsGridView.TabIndex = 84;
+            this.outRequestsGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.outRequestsGridView_RowHeaderMouseClick);
             // 
             // tabPage6
             // 
@@ -1769,6 +1819,126 @@ namespace warehouse_storage_system
             this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // inReqStoreName
+            // 
+            this.inReqStoreName.FormattingEnabled = true;
+            this.inReqStoreName.Location = new System.Drawing.Point(452, 105);
+            this.inReqStoreName.Name = "inReqStoreName";
+            this.inReqStoreName.Size = new System.Drawing.Size(120, 21);
+            this.inReqStoreName.TabIndex = 86;
+            // 
+            // outReqProdGridView
+            // 
+            this.outReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.outReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.outprodidd,
+            this.outreqprodnamee,
+            this.prodddateoutreq,
+            this.quuuantity});
+            this.outReqProdGridView.Location = new System.Drawing.Point(255, 37);
+            this.outReqProdGridView.Name = "outReqProdGridView";
+            this.outReqProdGridView.Size = new System.Drawing.Size(191, 211);
+            this.outReqProdGridView.TabIndex = 105;
+            this.outReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.outReqProdGridView_RowHeaderMouseClick);
+            // 
+            // outReqStoreName
+            // 
+            this.outReqStoreName.FormattingEnabled = true;
+            this.outReqStoreName.Location = new System.Drawing.Point(452, 105);
+            this.outReqStoreName.Name = "outReqStoreName";
+            this.outReqStoreName.Size = new System.Drawing.Size(120, 21);
+            this.outReqStoreName.TabIndex = 106;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label58.Location = new System.Drawing.Point(252, 12);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(68, 17);
+            this.label58.TabIndex = 107;
+            this.label58.Text = "products:";
+            // 
+            // outreqidd
+            // 
+            this.outreqidd.HeaderText = "ID";
+            this.outreqidd.Name = "outreqidd";
+            this.outreqidd.Width = 25;
+            // 
+            // outreqsuppname
+            // 
+            this.outreqsuppname.HeaderText = "supplier name";
+            this.outreqsuppname.Name = "outreqsuppname";
+            // 
+            // dateeq2
+            // 
+            this.dateeq2.HeaderText = "date";
+            this.dateeq2.Name = "dateeq2";
+            // 
+            // outprodidd
+            // 
+            this.outprodidd.HeaderText = "ID";
+            this.outprodidd.Name = "outprodidd";
+            this.outprodidd.Width = 25;
+            // 
+            // outreqprodnamee
+            // 
+            this.outreqprodnamee.HeaderText = "name";
+            this.outreqprodnamee.Name = "outreqprodnamee";
+            this.outreqprodnamee.Width = 50;
+            // 
+            // prodddateoutreq
+            // 
+            this.prodddateoutreq.HeaderText = "production date";
+            this.prodddateoutreq.Name = "prodddateoutreq";
+            this.prodddateoutreq.Width = 50;
+            // 
+            // quuuantity
+            // 
+            this.quuuantity.HeaderText = "quantity";
+            this.quuuantity.Name = "quuuantity";
+            this.quuuantity.Width = 50;
+            // 
+            // Inreq_ID
+            // 
+            this.Inreq_ID.HeaderText = "ID";
+            this.Inreq_ID.Name = "Inreq_ID";
+            this.Inreq_ID.Width = 25;
+            // 
+            // Inreq_supID
+            // 
+            this.Inreq_supID.HeaderText = "supplier name";
+            this.Inreq_supID.Name = "Inreq_supID";
+            // 
+            // dateee
+            // 
+            this.dateee.HeaderText = "date";
+            this.dateee.Name = "dateee";
+            // 
+            // prod_IDD
+            // 
+            this.prod_IDD.HeaderText = "ID";
+            this.prod_IDD.Name = "prod_IDD";
+            this.prod_IDD.Width = 25;
+            // 
+            // prod_nameee
+            // 
+            this.prod_nameee.HeaderText = "name";
+            this.prod_nameee.Name = "prod_nameee";
+            this.prod_nameee.Width = 50;
+            // 
+            // dateee1
+            // 
+            this.dateee1.HeaderText = "production date";
+            this.dateee1.Name = "dateee1";
+            this.dateee1.Width = 50;
+            // 
+            // quantityyy
+            // 
+            this.quantityyy.HeaderText = "quantity";
+            this.quantityyy.Name = "quantityyy";
+            this.quantityyy.Width = 50;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1802,11 +1972,13 @@ namespace warehouse_storage_system
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inReqProdGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inRequestsGridView)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outRequestsGridView)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.outReqProdGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1874,26 +2046,25 @@ namespace warehouse_storage_system
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox inReqProdDate;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox inReqExpPeriod;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox inReqQuantity;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox inReqSupName;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox inReqDate;
+        private System.Windows.Forms.Button inReqDeleteBtn;
+        private System.Windows.Forms.Button inReqUpdateBtn;
+        private System.Windows.Forms.Button inReqInsertBtn;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox inReqID;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox inReqProdID;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView inRequestsGridView;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
@@ -1901,26 +2072,25 @@ namespace warehouse_storage_system
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox outReqProdDate;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox outReqExpPeriod;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox outReqQuantity;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox outReqClientName;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.TextBox outReqDate;
+        private System.Windows.Forms.Button outReqDeleteBtn;
+        private System.Windows.Forms.Button outReqUpdateBtn;
+        private System.Windows.Forms.Button outReqInsertBtn;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox28;
+        private System.Windows.Forms.TextBox outReqID;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox outReqProdID;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView outRequestsGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn keeper;
@@ -1977,6 +2147,26 @@ namespace warehouse_storage_system
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn storetoName;
         private System.Windows.Forms.TextBox prodExpPeriodTextBox;
+        private System.Windows.Forms.DataGridView inReqProdGridView;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.ComboBox inReqStoreName;
+        private System.Windows.Forms.ComboBox outReqStoreName;
+        private System.Windows.Forms.DataGridView outReqProdGridView;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prod_IDD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prod_nameee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateee1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityyy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inreq_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inreq_supID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn outprodidd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn outreqprodnamee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodddateoutreq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quuuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn outreqidd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn outreqsuppname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateeq2;
     }
 }
 
