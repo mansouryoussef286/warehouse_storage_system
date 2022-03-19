@@ -31,6 +31,8 @@ namespace warehouse_storage_system
             fillFromToStoresGridView();
             fillInRequestsGridView();
             fillOutRequestsGridView();
+            //reportViewer1.RefreshReport();
+            //reportViewer1.ServerReport.Refresh();
         }
 
         #region stores tab
