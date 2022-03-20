@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,19 @@ namespace warehouse_storage_system
     public partial class MainApp : Form
     {
         //application variables
-        ConfirmDialog confirmDlg;   //delete confirmation box
+        ConfirmDialog confirmDlg;
         warehouseDBEntities1 entities;
 
         public MainApp()
         {
             InitializeComponent();
+            //initialize the DB entities
             entities = new warehouseDBEntities1();
         }
 
         private void MainApp_Load(object sender, EventArgs e)
         {
+            //load all the tabs 
             fillStoresGridView();
             fillSuppliersGridView();
             fillClientsGridView();
@@ -31,10 +34,9 @@ namespace warehouse_storage_system
             fillFromToStoresGridView();
             fillInRequestsGridView();
             fillOutRequestsGridView();
-            //reportViewer1.RefreshReport();
-            //reportViewer1.ServerReport.Refresh();
         }
 
+        //*******************************************************************//
         #region stores tab
         //fill the grid view of the stores
         public void fillStoresGridView()
@@ -972,6 +974,33 @@ namespace warehouse_storage_system
 
         #endregion
 
+        //*******************************************************************//
+        #region generating reports
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://localhost/reports/report/warehouse%20reports/storesReport");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://localhost/reports/report/warehouse%20reports/productsReport");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://localhost/reports/report/warehouse%20reports/productsMoveReport");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://localhost/reports/report/warehouse%20reports/productsDays");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://localhost/reports/report/warehouse%20reports/productsExpiry");
+        }
+        #endregion
     }
 
 }

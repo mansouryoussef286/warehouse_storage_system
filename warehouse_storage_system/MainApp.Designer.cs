@@ -31,54 +31,58 @@ namespace warehouse_storage_system
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.storeKeeperTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.storeAddressTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.storeNameTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.productsGridView_s = new System.Windows.Forms.DataGridView();
             this.deleteStoreBtn = new System.Windows.Forms.Button();
             this.updateStoreBtn = new System.Windows.Forms.Button();
             this.insertStoreBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.productsGridView_s = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prod_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.store = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.storesGridView = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keeper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.updateProductBtn = new System.Windows.Forms.Button();
             this.insertProductBtn = new System.Windows.Forms.Button();
-            this.prodProductionDateComboBox = new System.Windows.Forms.ComboBox();
             this.deleteProductBtn = new System.Windows.Forms.Button();
-            this.prodStoreComboBox = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.prodQuantityTextBox = new System.Windows.Forms.TextBox();
             this.prodExpPerTextBox = new System.Windows.Forms.TextBox();
             this.prodNameTextBox = new System.Windows.Forms.TextBox();
             this.prodIDTextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.prodProductionDateComboBox = new System.Windows.Forms.ComboBox();
+            this.prodStoreComboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.prodQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.productsGridView_p = new System.Windows.Forms.DataGridView();
             this.PROD_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prod_namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expire_period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.prodExpPeriodTextBox = new System.Windows.Forms.TextBox();
-            this.fromStoreGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label16 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.availableQuantityTextBox = new System.Windows.Forms.TextBox();
             this.reqQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.toStoreGridView = new System.Windows.Forms.DataGridView();
-            this.storetoName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.prodNameComboBox = new System.Windows.Forms.ComboBox();
             this.prodProdDateComboBox = new System.Windows.Forms.ComboBox();
             this.prodIDComboBox = new System.Windows.Forms.ComboBox();
@@ -88,51 +92,65 @@ namespace warehouse_storage_system
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.moveProductBtn = new System.Windows.Forms.Button();
+            this.fromStoreGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toStoreGridView = new System.Windows.Forms.DataGridView();
+            this.storetoName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label32 = new System.Windows.Forms.Label();
             this.supPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.supInsertBtn = new System.Windows.Forms.Button();
+            this.supUpdateBtn = new System.Windows.Forms.Button();
+            this.supIDTextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.supWebsiteTextBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.supFaxTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.supEmailTextBox = new System.Windows.Forms.TextBox();
-            this.supDeleteBtn = new System.Windows.Forms.Button();
-            this.supUpdateBtn = new System.Windows.Forms.Button();
-            this.supInsertBtn = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.supMobTextBox = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.supIDTextBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.supNameTextBox = new System.Windows.Forms.TextBox();
+            this.supDeleteBtn = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.suppliersGridView = new System.Windows.Forms.DataGridView();
+            this.sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.clientWebsiteTextBox = new System.Windows.Forms.TextBox();
+            this.clientUpdateBtn = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
+            this.clientInsertBtn = new System.Windows.Forms.Button();
+            this.clientNameTextBox = new System.Windows.Forms.TextBox();
             this.clientPhoneTextBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.clientWebsiteTextBox = new System.Windows.Forms.TextBox();
+            this.clientIDTextBox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.clientMobTextBox = new System.Windows.Forms.TextBox();
             this.clientFaxTextBox = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.clientEmailTextBox = new System.Windows.Forms.TextBox();
             this.clientDeleteBtn = new System.Windows.Forms.Button();
-            this.clientUpdateBtn = new System.Windows.Forms.Button();
-            this.clientInsertBtn = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.clientMobTextBox = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.clientIDTextBox = new System.Windows.Forms.TextBox();
-            this.clientNameTextBox = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.clientsGridView = new System.Windows.Forms.DataGridView();
+            this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.inReqStoreName = new System.Windows.Forms.ComboBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.inReqProdGridView = new System.Windows.Forms.DataGridView();
             this.label47 = new System.Windows.Forms.Label();
             this.inReqProdDate = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -143,7 +161,6 @@ namespace warehouse_storage_system
             this.inReqSupName = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.inReqDate = new System.Windows.Forms.TextBox();
-            this.inReqDeleteBtn = new System.Windows.Forms.Button();
             this.inReqUpdateBtn = new System.Windows.Forms.Button();
             this.inReqInsertBtn = new System.Windows.Forms.Button();
             this.label43 = new System.Windows.Forms.Label();
@@ -151,15 +168,21 @@ namespace warehouse_storage_system
             this.label44 = new System.Windows.Forms.Label();
             this.inReqProdID = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.inReqProdGridView = new System.Windows.Forms.DataGridView();
+            this.prod_IDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod_nameee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateee1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityyy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label46 = new System.Windows.Forms.Label();
             this.inRequestsGridView = new System.Windows.Forms.DataGridView();
             this.Inreq_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inreq_supID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inReqDeleteBtn = new System.Windows.Forms.Button();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label58 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.outReqStoreName = new System.Windows.Forms.ComboBox();
-            this.outReqProdGridView = new System.Windows.Forms.DataGridView();
             this.label40 = new System.Windows.Forms.Label();
             this.outReqProdDate = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -170,7 +193,6 @@ namespace warehouse_storage_system
             this.outReqClientName = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.outReqDate = new System.Windows.Forms.TextBox();
-            this.outReqDeleteBtn = new System.Windows.Forms.Button();
             this.outReqUpdateBtn = new System.Windows.Forms.Button();
             this.outReqInsertBtn = new System.Windows.Forms.Button();
             this.label53 = new System.Windows.Forms.Label();
@@ -178,78 +200,66 @@ namespace warehouse_storage_system
             this.label54 = new System.Windows.Forms.Label();
             this.outReqProdID = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.outReqProdGridView = new System.Windows.Forms.DataGridView();
+            this.outprodidd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outreqprodnamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodddateoutreq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quuuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label56 = new System.Windows.Forms.Label();
             this.outRequestsGridView = new System.Windows.Forms.DataGridView();
             this.outreqidd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outreqsuppname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateeq2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outReqDeleteBtn = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.keeper = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prod_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.store = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sup_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sup_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.prod_IDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod_nameee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateee1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityyy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.outprodidd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outreqprodnamee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodddateoutreq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quuuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_p)).BeginInit();
             this.tabPage8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inReqProdGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inRequestsGridView)).BeginInit();
             this.tabPage10.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.outReqProdGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outRequestsGridView)).BeginInit();
             this.tabPage6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -284,6 +294,24 @@ namespace warehouse_storage_system
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Stores";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.storeKeeperTextBox);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.storeAddressTextBox);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.storeNameTextBox);
+            this.groupBox1.Controls.Add(this.deleteStoreBtn);
+            this.groupBox1.Controls.Add(this.updateStoreBtn);
+            this.groupBox1.Controls.Add(this.insertStoreBtn);
+            this.groupBox1.Location = new System.Drawing.Point(32, 270);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(417, 114);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "store info";
             // 
             // label5
             // 
@@ -333,28 +361,6 @@ namespace warehouse_storage_system
             this.storeNameTextBox.Size = new System.Drawing.Size(120, 20);
             this.storeNameTextBox.TabIndex = 7;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.Location = new System.Drawing.Point(472, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Products:";
-            // 
-            // productsGridView_s
-            // 
-            this.productsGridView_s.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsGridView_s.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Prod_name,
-            this.store});
-            this.productsGridView_s.Location = new System.Drawing.Point(475, 41);
-            this.productsGridView_s.Name = "productsGridView_s";
-            this.productsGridView_s.Size = new System.Drawing.Size(295, 211);
-            this.productsGridView_s.TabIndex = 5;
-            // 
             // deleteStoreBtn
             // 
             this.deleteStoreBtn.Enabled = false;
@@ -386,6 +392,44 @@ namespace warehouse_storage_system
             this.insertStoreBtn.UseVisualStyleBackColor = true;
             this.insertStoreBtn.Click += new System.EventHandler(this.insertStoreBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.Location = new System.Drawing.Point(472, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Products:";
+            // 
+            // productsGridView_s
+            // 
+            this.productsGridView_s.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsGridView_s.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Prod_name,
+            this.store});
+            this.productsGridView_s.Location = new System.Drawing.Point(475, 41);
+            this.productsGridView_s.Name = "productsGridView_s";
+            this.productsGridView_s.Size = new System.Drawing.Size(295, 211);
+            this.productsGridView_s.TabIndex = 5;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Prod_name
+            // 
+            this.Prod_name.HeaderText = "Name";
+            this.Prod_name.Name = "Prod_name";
+            // 
+            // store
+            // 
+            this.store.HeaderText = "store";
+            this.store.Name = "store";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -411,6 +455,29 @@ namespace warehouse_storage_system
             this.storesGridView.Size = new System.Drawing.Size(355, 211);
             this.storesGridView.TabIndex = 0;
             this.storesGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.storesGridView_RowHeaderMouseClick);
+            // 
+            // name
+            // 
+            this.name.HeaderText = "name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.name.Width = 80;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "address";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            this.address.Width = 130;
+            // 
+            // keeper
+            // 
+            this.keeper.HeaderText = "keeper";
+            this.keeper.Name = "keeper";
+            this.keeper.ReadOnly = true;
+            this.keeper.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.keeper.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabPage2
             // 
@@ -447,6 +514,40 @@ namespace warehouse_storage_system
             this.tabPage7.Text = "Update product";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.prodProductionDateComboBox);
+            this.groupBox2.Controls.Add(this.prodStoreComboBox);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.prodQuantityTextBox);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(420, 36);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(336, 296);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "product info:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.updateProductBtn);
+            this.groupBox3.Controls.Add(this.insertProductBtn);
+            this.groupBox3.Controls.Add(this.deleteProductBtn);
+            this.groupBox3.Controls.Add(this.prodExpPerTextBox);
+            this.groupBox3.Controls.Add(this.prodNameTextBox);
+            this.groupBox3.Controls.Add(this.prodIDTextBox);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(15, 33);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(305, 141);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "modify products:";
+            // 
             // updateProductBtn
             // 
             this.updateProductBtn.Location = new System.Drawing.Point(177, 79);
@@ -467,15 +568,6 @@ namespace warehouse_storage_system
             this.insertProductBtn.UseVisualStyleBackColor = true;
             this.insertProductBtn.Click += new System.EventHandler(this.insertProductBtn_Click);
             // 
-            // prodProductionDateComboBox
-            // 
-            this.prodProductionDateComboBox.FormattingEnabled = true;
-            this.prodProductionDateComboBox.Location = new System.Drawing.Point(37, 233);
-            this.prodProductionDateComboBox.Name = "prodProductionDateComboBox";
-            this.prodProductionDateComboBox.Size = new System.Drawing.Size(142, 21);
-            this.prodProductionDateComboBox.TabIndex = 31;
-            this.prodProductionDateComboBox.SelectedIndexChanged += new System.EventHandler(this.prodProductionDateComboBox_SelectedIndexChanged);
-            // 
             // deleteProductBtn
             // 
             this.deleteProductBtn.Location = new System.Drawing.Point(177, 108);
@@ -486,6 +578,63 @@ namespace warehouse_storage_system
             this.deleteProductBtn.UseVisualStyleBackColor = true;
             this.deleteProductBtn.Visible = false;
             this.deleteProductBtn.Click += new System.EventHandler(this.deleteProductBtn_Click);
+            // 
+            // prodExpPerTextBox
+            // 
+            this.prodExpPerTextBox.Location = new System.Drawing.Point(22, 108);
+            this.prodExpPerTextBox.Name = "prodExpPerTextBox";
+            this.prodExpPerTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodExpPerTextBox.TabIndex = 22;
+            // 
+            // prodNameTextBox
+            // 
+            this.prodNameTextBox.Location = new System.Drawing.Point(22, 71);
+            this.prodNameTextBox.Name = "prodNameTextBox";
+            this.prodNameTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodNameTextBox.TabIndex = 18;
+            // 
+            // prodIDTextBox
+            // 
+            this.prodIDTextBox.Location = new System.Drawing.Point(22, 32);
+            this.prodIDTextBox.Name = "prodIDTextBox";
+            this.prodIDTextBox.Size = new System.Drawing.Size(142, 20);
+            this.prodIDTextBox.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "expire period";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "ID";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "name";
+            // 
+            // prodProductionDateComboBox
+            // 
+            this.prodProductionDateComboBox.FormattingEnabled = true;
+            this.prodProductionDateComboBox.Location = new System.Drawing.Point(37, 233);
+            this.prodProductionDateComboBox.Name = "prodProductionDateComboBox";
+            this.prodProductionDateComboBox.Size = new System.Drawing.Size(142, 21);
+            this.prodProductionDateComboBox.TabIndex = 31;
+            this.prodProductionDateComboBox.SelectedIndexChanged += new System.EventHandler(this.prodProductionDateComboBox_SelectedIndexChanged);
             // 
             // prodStoreComboBox
             // 
@@ -512,27 +661,6 @@ namespace warehouse_storage_system
             this.prodQuantityTextBox.Size = new System.Drawing.Size(142, 20);
             this.prodQuantityTextBox.TabIndex = 26;
             // 
-            // prodExpPerTextBox
-            // 
-            this.prodExpPerTextBox.Location = new System.Drawing.Point(22, 108);
-            this.prodExpPerTextBox.Name = "prodExpPerTextBox";
-            this.prodExpPerTextBox.Size = new System.Drawing.Size(142, 20);
-            this.prodExpPerTextBox.TabIndex = 22;
-            // 
-            // prodNameTextBox
-            // 
-            this.prodNameTextBox.Location = new System.Drawing.Point(22, 71);
-            this.prodNameTextBox.Name = "prodNameTextBox";
-            this.prodNameTextBox.Size = new System.Drawing.Size(142, 20);
-            this.prodNameTextBox.TabIndex = 18;
-            // 
-            // prodIDTextBox
-            // 
-            this.prodIDTextBox.Location = new System.Drawing.Point(22, 32);
-            this.prodIDTextBox.Name = "prodIDTextBox";
-            this.prodIDTextBox.Size = new System.Drawing.Size(142, 20);
-            this.prodIDTextBox.TabIndex = 16;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -542,15 +670,6 @@ namespace warehouse_storage_system
             this.label10.TabIndex = 25;
             this.label10.Text = "prod. date";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 92);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "expire period";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -559,24 +678,6 @@ namespace warehouse_storage_system
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 21;
             this.label6.Text = "store";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "name";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "ID";
             // 
             // label9
             // 
@@ -632,33 +733,35 @@ namespace warehouse_storage_system
             this.tabPage8.Text = "Move product";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.prodExpPeriodTextBox);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Controls.Add(this.availableQuantityTextBox);
+            this.groupBox4.Controls.Add(this.reqQuantityTextBox);
+            this.groupBox4.Controls.Add(this.prodNameComboBox);
+            this.groupBox4.Controls.Add(this.prodProdDateComboBox);
+            this.groupBox4.Controls.Add(this.prodIDComboBox);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.moveProductBtn);
+            this.groupBox4.Location = new System.Drawing.Point(276, 49);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(267, 270);
+            this.groupBox4.TabIndex = 60;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "move product:";
+            // 
             // prodExpPeriodTextBox
             // 
             this.prodExpPeriodTextBox.Location = new System.Drawing.Point(24, 113);
             this.prodExpPeriodTextBox.Name = "prodExpPeriodTextBox";
             this.prodExpPeriodTextBox.Size = new System.Drawing.Size(173, 20);
             this.prodExpPeriodTextBox.TabIndex = 59;
-            // 
-            // fromStoreGridView
-            // 
-            this.fromStoreGridView.AllowUserToAddRows = false;
-            this.fromStoreGridView.AllowUserToDeleteRows = false;
-            this.fromStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.fromStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.fromStoreGridView.Location = new System.Drawing.Point(53, 49);
-            this.fromStoreGridView.Name = "fromStoreGridView";
-            this.fromStoreGridView.ReadOnly = true;
-            this.fromStoreGridView.Size = new System.Drawing.Size(143, 270);
-            this.fromStoreGridView.TabIndex = 58;
-            this.fromStoreGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.fromStoreGridView_RowHeaderMouseClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // label16
             // 
@@ -668,6 +771,16 @@ namespace warehouse_storage_system
             this.label16.Size = new System.Drawing.Size(47, 13);
             this.label16.TabIndex = 57;
             this.label16.Text = "quantity";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label22.Location = new System.Drawing.Point(230, 111);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(31, 23);
+            this.label22.TabIndex = 55;
+            this.label22.Text = "->";
             // 
             // availableQuantityTextBox
             // 
@@ -683,51 +796,6 @@ namespace warehouse_storage_system
             this.reqQuantityTextBox.Name = "reqQuantityTextBox";
             this.reqQuantityTextBox.Size = new System.Drawing.Size(86, 20);
             this.reqQuantityTextBox.TabIndex = 43;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label22.Location = new System.Drawing.Point(230, 111);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(31, 23);
-            this.label22.TabIndex = 55;
-            this.label22.Text = "->";
-            // 
-            // toStoreGridView
-            // 
-            this.toStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.toStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.storetoName});
-            this.toStoreGridView.Location = new System.Drawing.Point(605, 49);
-            this.toStoreGridView.Name = "toStoreGridView";
-            this.toStoreGridView.Size = new System.Drawing.Size(143, 270);
-            this.toStoreGridView.TabIndex = 54;
-            // 
-            // storetoName
-            // 
-            this.storetoName.HeaderText = "name";
-            this.storetoName.Name = "storetoName";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label21.Location = new System.Drawing.Point(602, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(29, 17);
-            this.label21.TabIndex = 53;
-            this.label21.Text = "To:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label20.Location = new System.Drawing.Point(50, 22);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 17);
-            this.label20.TabIndex = 52;
-            this.label20.Text = "From:";
             // 
             // prodNameComboBox
             // 
@@ -811,6 +879,62 @@ namespace warehouse_storage_system
             this.moveProductBtn.UseVisualStyleBackColor = true;
             this.moveProductBtn.Click += new System.EventHandler(this.mvoeProductBtn_Click);
             // 
+            // fromStoreGridView
+            // 
+            this.fromStoreGridView.AllowUserToAddRows = false;
+            this.fromStoreGridView.AllowUserToDeleteRows = false;
+            this.fromStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.fromStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.fromStoreGridView.Location = new System.Drawing.Point(53, 49);
+            this.fromStoreGridView.Name = "fromStoreGridView";
+            this.fromStoreGridView.ReadOnly = true;
+            this.fromStoreGridView.Size = new System.Drawing.Size(143, 270);
+            this.fromStoreGridView.TabIndex = 58;
+            this.fromStoreGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.fromStoreGridView_RowHeaderMouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // toStoreGridView
+            // 
+            this.toStoreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.toStoreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.storetoName});
+            this.toStoreGridView.Location = new System.Drawing.Point(605, 49);
+            this.toStoreGridView.Name = "toStoreGridView";
+            this.toStoreGridView.Size = new System.Drawing.Size(143, 270);
+            this.toStoreGridView.TabIndex = 54;
+            // 
+            // storetoName
+            // 
+            this.storetoName.HeaderText = "name";
+            this.storetoName.Name = "storetoName";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label21.Location = new System.Drawing.Point(602, 22);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(29, 17);
+            this.label21.TabIndex = 53;
+            this.label21.Text = "To:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label20.Location = new System.Drawing.Point(50, 22);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 17);
+            this.label20.TabIndex = 52;
+            this.label20.Text = "From:";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox5);
@@ -824,6 +948,31 @@ namespace warehouse_storage_system
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Suppliers";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label32);
+            this.groupBox5.Controls.Add(this.supPhoneTextBox);
+            this.groupBox5.Controls.Add(this.supInsertBtn);
+            this.groupBox5.Controls.Add(this.supUpdateBtn);
+            this.groupBox5.Controls.Add(this.supIDTextBox);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.supWebsiteTextBox);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.supFaxTextBox);
+            this.groupBox5.Controls.Add(this.label29);
+            this.groupBox5.Controls.Add(this.supEmailTextBox);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.supMobTextBox);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.supNameTextBox);
+            this.groupBox5.Location = new System.Drawing.Point(436, 17);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(292, 353);
+            this.groupBox5.TabIndex = 42;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "supplier info:";
             // 
             // label32
             // 
@@ -840,6 +989,43 @@ namespace warehouse_storage_system
             this.supPhoneTextBox.Name = "supPhoneTextBox";
             this.supPhoneTextBox.Size = new System.Drawing.Size(190, 20);
             this.supPhoneTextBox.TabIndex = 40;
+            // 
+            // supInsertBtn
+            // 
+            this.supInsertBtn.Location = new System.Drawing.Point(50, 318);
+            this.supInsertBtn.Name = "supInsertBtn";
+            this.supInsertBtn.Size = new System.Drawing.Size(90, 23);
+            this.supInsertBtn.TabIndex = 31;
+            this.supInsertBtn.Text = "insert";
+            this.supInsertBtn.UseVisualStyleBackColor = true;
+            this.supInsertBtn.Click += new System.EventHandler(this.supInsertBtn_Click);
+            // 
+            // supUpdateBtn
+            // 
+            this.supUpdateBtn.Location = new System.Drawing.Point(150, 318);
+            this.supUpdateBtn.Name = "supUpdateBtn";
+            this.supUpdateBtn.Size = new System.Drawing.Size(90, 23);
+            this.supUpdateBtn.TabIndex = 32;
+            this.supUpdateBtn.Text = "update";
+            this.supUpdateBtn.UseVisualStyleBackColor = true;
+            this.supUpdateBtn.Click += new System.EventHandler(this.supUpdateBtn_Click);
+            // 
+            // supIDTextBox
+            // 
+            this.supIDTextBox.Enabled = false;
+            this.supIDTextBox.Location = new System.Drawing.Point(50, 32);
+            this.supIDTextBox.Name = "supIDTextBox";
+            this.supIDTextBox.Size = new System.Drawing.Size(190, 20);
+            this.supIDTextBox.TabIndex = 20;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(50, 17);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(18, 13);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "ID";
             // 
             // label27
             // 
@@ -889,36 +1075,6 @@ namespace warehouse_storage_system
             this.supEmailTextBox.Size = new System.Drawing.Size(190, 20);
             this.supEmailTextBox.TabIndex = 34;
             // 
-            // supDeleteBtn
-            // 
-            this.supDeleteBtn.Location = new System.Drawing.Point(762, 367);
-            this.supDeleteBtn.Name = "supDeleteBtn";
-            this.supDeleteBtn.Size = new System.Drawing.Size(98, 23);
-            this.supDeleteBtn.TabIndex = 33;
-            this.supDeleteBtn.Text = "delete";
-            this.supDeleteBtn.UseVisualStyleBackColor = true;
-            this.supDeleteBtn.Click += new System.EventHandler(this.supDeleteBtn_Click);
-            // 
-            // supUpdateBtn
-            // 
-            this.supUpdateBtn.Location = new System.Drawing.Point(150, 318);
-            this.supUpdateBtn.Name = "supUpdateBtn";
-            this.supUpdateBtn.Size = new System.Drawing.Size(90, 23);
-            this.supUpdateBtn.TabIndex = 32;
-            this.supUpdateBtn.Text = "update";
-            this.supUpdateBtn.UseVisualStyleBackColor = true;
-            this.supUpdateBtn.Click += new System.EventHandler(this.supUpdateBtn_Click);
-            // 
-            // supInsertBtn
-            // 
-            this.supInsertBtn.Location = new System.Drawing.Point(50, 318);
-            this.supInsertBtn.Name = "supInsertBtn";
-            this.supInsertBtn.Size = new System.Drawing.Size(90, 23);
-            this.supInsertBtn.TabIndex = 31;
-            this.supInsertBtn.Text = "insert";
-            this.supInsertBtn.UseVisualStyleBackColor = true;
-            this.supInsertBtn.Click += new System.EventHandler(this.supInsertBtn_Click);
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -935,23 +1091,6 @@ namespace warehouse_storage_system
             this.supMobTextBox.Size = new System.Drawing.Size(190, 20);
             this.supMobTextBox.TabIndex = 22;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(50, 17);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(18, 13);
-            this.label24.TabIndex = 21;
-            this.label24.Text = "ID";
-            // 
-            // supIDTextBox
-            // 
-            this.supIDTextBox.Enabled = false;
-            this.supIDTextBox.Location = new System.Drawing.Point(50, 32);
-            this.supIDTextBox.Name = "supIDTextBox";
-            this.supIDTextBox.Size = new System.Drawing.Size(190, 20);
-            this.supIDTextBox.TabIndex = 20;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -967,6 +1106,16 @@ namespace warehouse_storage_system
             this.supNameTextBox.Name = "supNameTextBox";
             this.supNameTextBox.Size = new System.Drawing.Size(190, 20);
             this.supNameTextBox.TabIndex = 18;
+            // 
+            // supDeleteBtn
+            // 
+            this.supDeleteBtn.Location = new System.Drawing.Point(762, 367);
+            this.supDeleteBtn.Name = "supDeleteBtn";
+            this.supDeleteBtn.Size = new System.Drawing.Size(98, 23);
+            this.supDeleteBtn.TabIndex = 33;
+            this.supDeleteBtn.Text = "delete";
+            this.supDeleteBtn.UseVisualStyleBackColor = true;
+            this.supDeleteBtn.Click += new System.EventHandler(this.supDeleteBtn_Click);
             // 
             // label26
             // 
@@ -991,6 +1140,22 @@ namespace warehouse_storage_system
             this.suppliersGridView.TabIndex = 13;
             this.suppliersGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.suppliersGridView_RowHeaderMouseClick);
             // 
+            // sup_ID
+            // 
+            this.sup_ID.HeaderText = "ID";
+            this.sup_ID.Name = "sup_ID";
+            this.sup_ID.Width = 50;
+            // 
+            // sup_Name
+            // 
+            this.sup_Name.HeaderText = "Name";
+            this.sup_Name.Name = "sup_Name";
+            // 
+            // sup_Phone
+            // 
+            this.sup_Phone.HeaderText = "Phone";
+            this.sup_Phone.Name = "sup_Phone";
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox6);
@@ -1005,6 +1170,57 @@ namespace warehouse_storage_system
             this.tabPage4.Text = "Clients";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.clientWebsiteTextBox);
+            this.groupBox6.Controls.Add(this.clientUpdateBtn);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.clientInsertBtn);
+            this.groupBox6.Controls.Add(this.clientNameTextBox);
+            this.groupBox6.Controls.Add(this.clientPhoneTextBox);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.clientIDTextBox);
+            this.groupBox6.Controls.Add(this.label36);
+            this.groupBox6.Controls.Add(this.label33);
+            this.groupBox6.Controls.Add(this.clientMobTextBox);
+            this.groupBox6.Controls.Add(this.clientFaxTextBox);
+            this.groupBox6.Controls.Add(this.label35);
+            this.groupBox6.Controls.Add(this.label34);
+            this.groupBox6.Controls.Add(this.clientEmailTextBox);
+            this.groupBox6.Location = new System.Drawing.Point(436, 17);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(292, 353);
+            this.groupBox6.TabIndex = 61;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "supplier info:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(50, 56);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(33, 13);
+            this.label19.TabIndex = 61;
+            this.label19.Text = "name";
+            // 
+            // clientWebsiteTextBox
+            // 
+            this.clientWebsiteTextBox.Location = new System.Drawing.Point(53, 282);
+            this.clientWebsiteTextBox.Name = "clientWebsiteTextBox";
+            this.clientWebsiteTextBox.Size = new System.Drawing.Size(190, 20);
+            this.clientWebsiteTextBox.TabIndex = 57;
+            // 
+            // clientUpdateBtn
+            // 
+            this.clientUpdateBtn.Location = new System.Drawing.Point(153, 318);
+            this.clientUpdateBtn.Name = "clientUpdateBtn";
+            this.clientUpdateBtn.Size = new System.Drawing.Size(90, 23);
+            this.clientUpdateBtn.TabIndex = 51;
+            this.clientUpdateBtn.Text = "update";
+            this.clientUpdateBtn.UseVisualStyleBackColor = true;
+            this.clientUpdateBtn.Click += new System.EventHandler(this.clientUpdateBtn_Click);
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -1013,6 +1229,23 @@ namespace warehouse_storage_system
             this.label30.Size = new System.Drawing.Size(37, 13);
             this.label30.TabIndex = 60;
             this.label30.Text = "phone";
+            // 
+            // clientInsertBtn
+            // 
+            this.clientInsertBtn.Location = new System.Drawing.Point(50, 318);
+            this.clientInsertBtn.Name = "clientInsertBtn";
+            this.clientInsertBtn.Size = new System.Drawing.Size(90, 23);
+            this.clientInsertBtn.TabIndex = 50;
+            this.clientInsertBtn.Text = "insert";
+            this.clientInsertBtn.UseVisualStyleBackColor = true;
+            this.clientInsertBtn.Click += new System.EventHandler(this.clientInsertBtn_Click);
+            // 
+            // clientNameTextBox
+            // 
+            this.clientNameTextBox.Location = new System.Drawing.Point(53, 72);
+            this.clientNameTextBox.Name = "clientNameTextBox";
+            this.clientNameTextBox.Size = new System.Drawing.Size(190, 20);
+            this.clientNameTextBox.TabIndex = 44;
             // 
             // clientPhoneTextBox
             // 
@@ -1030,12 +1263,22 @@ namespace warehouse_storage_system
             this.label31.TabIndex = 58;
             this.label31.Text = "website";
             // 
-            // clientWebsiteTextBox
+            // clientIDTextBox
             // 
-            this.clientWebsiteTextBox.Location = new System.Drawing.Point(53, 282);
-            this.clientWebsiteTextBox.Name = "clientWebsiteTextBox";
-            this.clientWebsiteTextBox.Size = new System.Drawing.Size(190, 20);
-            this.clientWebsiteTextBox.TabIndex = 57;
+            this.clientIDTextBox.Enabled = false;
+            this.clientIDTextBox.Location = new System.Drawing.Point(53, 32);
+            this.clientIDTextBox.Name = "clientIDTextBox";
+            this.clientIDTextBox.Size = new System.Drawing.Size(190, 20);
+            this.clientIDTextBox.TabIndex = 46;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(53, 17);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(18, 13);
+            this.label36.TabIndex = 47;
+            this.label36.Text = "ID";
             // 
             // label33
             // 
@@ -1046,12 +1289,28 @@ namespace warehouse_storage_system
             this.label33.TabIndex = 56;
             this.label33.Text = "fax";
             // 
+            // clientMobTextBox
+            // 
+            this.clientMobTextBox.Location = new System.Drawing.Point(53, 114);
+            this.clientMobTextBox.Name = "clientMobTextBox";
+            this.clientMobTextBox.Size = new System.Drawing.Size(190, 20);
+            this.clientMobTextBox.TabIndex = 48;
+            // 
             // clientFaxTextBox
             // 
             this.clientFaxTextBox.Location = new System.Drawing.Point(53, 240);
             this.clientFaxTextBox.Name = "clientFaxTextBox";
             this.clientFaxTextBox.Size = new System.Drawing.Size(190, 20);
             this.clientFaxTextBox.TabIndex = 55;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(50, 95);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(37, 13);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "mobile";
             // 
             // label34
             // 
@@ -1079,66 +1338,6 @@ namespace warehouse_storage_system
             this.clientDeleteBtn.UseVisualStyleBackColor = true;
             this.clientDeleteBtn.Click += new System.EventHandler(this.clientDeleteBtn_Click);
             // 
-            // clientUpdateBtn
-            // 
-            this.clientUpdateBtn.Location = new System.Drawing.Point(153, 318);
-            this.clientUpdateBtn.Name = "clientUpdateBtn";
-            this.clientUpdateBtn.Size = new System.Drawing.Size(90, 23);
-            this.clientUpdateBtn.TabIndex = 51;
-            this.clientUpdateBtn.Text = "update";
-            this.clientUpdateBtn.UseVisualStyleBackColor = true;
-            this.clientUpdateBtn.Click += new System.EventHandler(this.clientUpdateBtn_Click);
-            // 
-            // clientInsertBtn
-            // 
-            this.clientInsertBtn.Location = new System.Drawing.Point(50, 318);
-            this.clientInsertBtn.Name = "clientInsertBtn";
-            this.clientInsertBtn.Size = new System.Drawing.Size(90, 23);
-            this.clientInsertBtn.TabIndex = 50;
-            this.clientInsertBtn.Text = "insert";
-            this.clientInsertBtn.UseVisualStyleBackColor = true;
-            this.clientInsertBtn.Click += new System.EventHandler(this.clientInsertBtn_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(50, 95);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(37, 13);
-            this.label35.TabIndex = 49;
-            this.label35.Text = "mobile";
-            // 
-            // clientMobTextBox
-            // 
-            this.clientMobTextBox.Location = new System.Drawing.Point(53, 114);
-            this.clientMobTextBox.Name = "clientMobTextBox";
-            this.clientMobTextBox.Size = new System.Drawing.Size(190, 20);
-            this.clientMobTextBox.TabIndex = 48;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(53, 17);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(18, 13);
-            this.label36.TabIndex = 47;
-            this.label36.Text = "ID";
-            // 
-            // clientIDTextBox
-            // 
-            this.clientIDTextBox.Enabled = false;
-            this.clientIDTextBox.Location = new System.Drawing.Point(53, 32);
-            this.clientIDTextBox.Name = "clientIDTextBox";
-            this.clientIDTextBox.Size = new System.Drawing.Size(190, 20);
-            this.clientIDTextBox.TabIndex = 46;
-            // 
-            // clientNameTextBox
-            // 
-            this.clientNameTextBox.Location = new System.Drawing.Point(53, 72);
-            this.clientNameTextBox.Name = "clientNameTextBox";
-            this.clientNameTextBox.Size = new System.Drawing.Size(190, 20);
-            this.clientNameTextBox.TabIndex = 44;
-            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -1161,6 +1360,22 @@ namespace warehouse_storage_system
             this.clientsGridView.Size = new System.Drawing.Size(307, 328);
             this.clientsGridView.TabIndex = 42;
             this.clientsGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clientsGridView_RowHeaderMouseClick);
+            // 
+            // client_ID
+            // 
+            this.client_ID.HeaderText = "ID";
+            this.client_ID.Name = "client_ID";
+            this.client_ID.Width = 50;
+            // 
+            // client_Name
+            // 
+            this.client_Name.HeaderText = "Name";
+            this.client_Name.Name = "client_Name";
+            // 
+            // client_phone
+            // 
+            this.client_phone.HeaderText = "Phone";
+            this.client_phone.Name = "client_phone";
             // 
             // tabPage5
             // 
@@ -1200,6 +1415,33 @@ namespace warehouse_storage_system
             this.tabPage9.Text = "incoming request";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.inReqStoreName);
+            this.groupBox7.Controls.Add(this.label47);
+            this.groupBox7.Controls.Add(this.inReqProdDate);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.inReqExpPeriod);
+            this.groupBox7.Controls.Add(this.label39);
+            this.groupBox7.Controls.Add(this.inReqQuantity);
+            this.groupBox7.Controls.Add(this.label41);
+            this.groupBox7.Controls.Add(this.inReqSupName);
+            this.groupBox7.Controls.Add(this.label42);
+            this.groupBox7.Controls.Add(this.inReqDate);
+            this.groupBox7.Controls.Add(this.inReqUpdateBtn);
+            this.groupBox7.Controls.Add(this.inReqInsertBtn);
+            this.groupBox7.Controls.Add(this.label43);
+            this.groupBox7.Controls.Add(this.inReqID);
+            this.groupBox7.Controls.Add(this.label44);
+            this.groupBox7.Controls.Add(this.inReqProdID);
+            this.groupBox7.Controls.Add(this.label45);
+            this.groupBox7.Location = new System.Drawing.Point(575, 36);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(270, 302);
+            this.groupBox7.TabIndex = 87;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "request info";
+            // 
             // inReqStoreName
             // 
             this.inReqStoreName.FormattingEnabled = true;
@@ -1207,30 +1449,6 @@ namespace warehouse_storage_system
             this.inReqStoreName.Name = "inReqStoreName";
             this.inReqStoreName.Size = new System.Drawing.Size(120, 21);
             this.inReqStoreName.TabIndex = 86;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label57.Location = new System.Drawing.Point(285, 11);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(68, 17);
-            this.label57.TabIndex = 85;
-            this.label57.Text = "products:";
-            // 
-            // inReqProdGridView
-            // 
-            this.inReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.prod_IDD,
-            this.prod_nameee,
-            this.dateee1,
-            this.quantityyy});
-            this.inReqProdGridView.Location = new System.Drawing.Point(288, 36);
-            this.inReqProdGridView.Name = "inReqProdGridView";
-            this.inReqProdGridView.Size = new System.Drawing.Size(281, 302);
-            this.inReqProdGridView.TabIndex = 84;
-            this.inReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.inReqProdGridView_RowHeaderMouseClick);
             // 
             // label47
             // 
@@ -1312,16 +1530,6 @@ namespace warehouse_storage_system
             this.inReqDate.Size = new System.Drawing.Size(120, 20);
             this.inReqDate.TabIndex = 72;
             // 
-            // inReqDeleteBtn
-            // 
-            this.inReqDeleteBtn.Location = new System.Drawing.Point(762, 341);
-            this.inReqDeleteBtn.Name = "inReqDeleteBtn";
-            this.inReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
-            this.inReqDeleteBtn.TabIndex = 71;
-            this.inReqDeleteBtn.Text = "delete";
-            this.inReqDeleteBtn.UseVisualStyleBackColor = true;
-            this.inReqDeleteBtn.Visible = false;
-            // 
             // inReqUpdateBtn
             // 
             this.inReqUpdateBtn.Location = new System.Drawing.Point(147, 248);
@@ -1383,6 +1591,54 @@ namespace warehouse_storage_system
             this.label45.TabIndex = 64;
             this.label45.Text = "store name";
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label57.Location = new System.Drawing.Point(285, 11);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(68, 17);
+            this.label57.TabIndex = 85;
+            this.label57.Text = "products:";
+            // 
+            // inReqProdGridView
+            // 
+            this.inReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.inReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prod_IDD,
+            this.prod_nameee,
+            this.dateee1,
+            this.quantityyy});
+            this.inReqProdGridView.Location = new System.Drawing.Point(288, 36);
+            this.inReqProdGridView.Name = "inReqProdGridView";
+            this.inReqProdGridView.Size = new System.Drawing.Size(281, 302);
+            this.inReqProdGridView.TabIndex = 84;
+            this.inReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.inReqProdGridView_RowHeaderMouseClick);
+            // 
+            // prod_IDD
+            // 
+            this.prod_IDD.HeaderText = "ID";
+            this.prod_IDD.Name = "prod_IDD";
+            this.prod_IDD.Width = 25;
+            // 
+            // prod_nameee
+            // 
+            this.prod_nameee.HeaderText = "name";
+            this.prod_nameee.Name = "prod_nameee";
+            this.prod_nameee.Width = 80;
+            // 
+            // dateee1
+            // 
+            this.dateee1.HeaderText = "production date";
+            this.dateee1.Name = "dateee1";
+            this.dateee1.Width = 80;
+            // 
+            // quantityyy
+            // 
+            this.quantityyy.HeaderText = "quantity";
+            this.quantityyy.Name = "quantityyy";
+            this.quantityyy.Width = 50;
+            // 
             // label46
             // 
             this.label46.AutoSize = true;
@@ -1422,6 +1678,16 @@ namespace warehouse_storage_system
             this.dateee.HeaderText = "date";
             this.dateee.Name = "dateee";
             // 
+            // inReqDeleteBtn
+            // 
+            this.inReqDeleteBtn.Location = new System.Drawing.Point(762, 341);
+            this.inReqDeleteBtn.Name = "inReqDeleteBtn";
+            this.inReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
+            this.inReqDeleteBtn.TabIndex = 71;
+            this.inReqDeleteBtn.Text = "delete";
+            this.inReqDeleteBtn.UseVisualStyleBackColor = true;
+            this.inReqDeleteBtn.Visible = false;
+            // 
             // tabPage10
             // 
             this.tabPage10.Controls.Add(this.groupBox8);
@@ -1438,15 +1704,32 @@ namespace warehouse_storage_system
             this.tabPage10.Text = "outgoing requests";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // label58
+            // groupBox8
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label58.Location = new System.Drawing.Point(285, 11);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(68, 17);
-            this.label58.TabIndex = 107;
-            this.label58.Text = "products:";
+            this.groupBox8.Controls.Add(this.outReqStoreName);
+            this.groupBox8.Controls.Add(this.label40);
+            this.groupBox8.Controls.Add(this.outReqProdDate);
+            this.groupBox8.Controls.Add(this.label49);
+            this.groupBox8.Controls.Add(this.outReqExpPeriod);
+            this.groupBox8.Controls.Add(this.label50);
+            this.groupBox8.Controls.Add(this.outReqQuantity);
+            this.groupBox8.Controls.Add(this.label51);
+            this.groupBox8.Controls.Add(this.outReqClientName);
+            this.groupBox8.Controls.Add(this.label52);
+            this.groupBox8.Controls.Add(this.outReqDate);
+            this.groupBox8.Controls.Add(this.outReqUpdateBtn);
+            this.groupBox8.Controls.Add(this.outReqInsertBtn);
+            this.groupBox8.Controls.Add(this.label53);
+            this.groupBox8.Controls.Add(this.outReqID);
+            this.groupBox8.Controls.Add(this.label54);
+            this.groupBox8.Controls.Add(this.outReqProdID);
+            this.groupBox8.Controls.Add(this.label55);
+            this.groupBox8.Location = new System.Drawing.Point(575, 36);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(275, 302);
+            this.groupBox8.TabIndex = 108;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "request info";
             // 
             // outReqStoreName
             // 
@@ -1455,20 +1738,6 @@ namespace warehouse_storage_system
             this.outReqStoreName.Name = "outReqStoreName";
             this.outReqStoreName.Size = new System.Drawing.Size(120, 21);
             this.outReqStoreName.TabIndex = 106;
-            // 
-            // outReqProdGridView
-            // 
-            this.outReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.outReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.outprodidd,
-            this.outreqprodnamee,
-            this.prodddateoutreq,
-            this.quuuantity});
-            this.outReqProdGridView.Location = new System.Drawing.Point(288, 37);
-            this.outReqProdGridView.Name = "outReqProdGridView";
-            this.outReqProdGridView.Size = new System.Drawing.Size(281, 302);
-            this.outReqProdGridView.TabIndex = 105;
-            this.outReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.outReqProdGridView_RowHeaderMouseClick);
             // 
             // label40
             // 
@@ -1550,16 +1819,6 @@ namespace warehouse_storage_system
             this.outReqDate.Size = new System.Drawing.Size(120, 20);
             this.outReqDate.TabIndex = 95;
             // 
-            // outReqDeleteBtn
-            // 
-            this.outReqDeleteBtn.Location = new System.Drawing.Point(774, 344);
-            this.outReqDeleteBtn.Name = "outReqDeleteBtn";
-            this.outReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
-            this.outReqDeleteBtn.TabIndex = 94;
-            this.outReqDeleteBtn.Text = "delete";
-            this.outReqDeleteBtn.UseVisualStyleBackColor = true;
-            this.outReqDeleteBtn.Visible = false;
-            // 
             // outReqUpdateBtn
             // 
             this.outReqUpdateBtn.Location = new System.Drawing.Point(147, 248);
@@ -1621,6 +1880,54 @@ namespace warehouse_storage_system
             this.label55.TabIndex = 87;
             this.label55.Text = "store name";
             // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label58.Location = new System.Drawing.Point(285, 11);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(68, 17);
+            this.label58.TabIndex = 107;
+            this.label58.Text = "products:";
+            // 
+            // outReqProdGridView
+            // 
+            this.outReqProdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.outReqProdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.outprodidd,
+            this.outreqprodnamee,
+            this.prodddateoutreq,
+            this.quuuantity});
+            this.outReqProdGridView.Location = new System.Drawing.Point(288, 37);
+            this.outReqProdGridView.Name = "outReqProdGridView";
+            this.outReqProdGridView.Size = new System.Drawing.Size(281, 302);
+            this.outReqProdGridView.TabIndex = 105;
+            this.outReqProdGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.outReqProdGridView_RowHeaderMouseClick);
+            // 
+            // outprodidd
+            // 
+            this.outprodidd.HeaderText = "ID";
+            this.outprodidd.Name = "outprodidd";
+            this.outprodidd.Width = 25;
+            // 
+            // outreqprodnamee
+            // 
+            this.outreqprodnamee.HeaderText = "name";
+            this.outreqprodnamee.Name = "outreqprodnamee";
+            this.outreqprodnamee.Width = 80;
+            // 
+            // prodddateoutreq
+            // 
+            this.prodddateoutreq.HeaderText = "production date";
+            this.prodddateoutreq.Name = "prodddateoutreq";
+            this.prodddateoutreq.Width = 80;
+            // 
+            // quuuantity
+            // 
+            this.quuuantity.HeaderText = "quantity";
+            this.quuuantity.Name = "quuuantity";
+            this.quuuantity.Width = 50;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -1660,13 +1967,23 @@ namespace warehouse_storage_system
             this.dateeq2.HeaderText = "date";
             this.dateeq2.Name = "dateeq2";
             // 
+            // outReqDeleteBtn
+            // 
+            this.outReqDeleteBtn.Location = new System.Drawing.Point(774, 344);
+            this.outReqDeleteBtn.Name = "outReqDeleteBtn";
+            this.outReqDeleteBtn.Size = new System.Drawing.Size(71, 23);
+            this.outReqDeleteBtn.TabIndex = 94;
+            this.outReqDeleteBtn.Text = "delete";
+            this.outReqDeleteBtn.UseVisualStyleBackColor = true;
+            this.outReqDeleteBtn.Visible = false;
+            // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.button12);
-            this.tabPage6.Controls.Add(this.button11);
-            this.tabPage6.Controls.Add(this.button10);
-            this.tabPage6.Controls.Add(this.button9);
-            this.tabPage6.Controls.Add(this.button8);
+            this.tabPage6.Controls.Add(this.groupBox13);
+            this.tabPage6.Controls.Add(this.groupBox10);
+            this.tabPage6.Controls.Add(this.groupBox11);
+            this.tabPage6.Controls.Add(this.groupBox12);
+            this.tabPage6.Controls.Add(this.groupBox9);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1677,355 +1994,103 @@ namespace warehouse_storage_system
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(350, 21);
+            this.button12.Location = new System.Drawing.Point(634, 19);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.Size = new System.Drawing.Size(147, 23);
             this.button12.TabIndex = 4;
-            this.button12.Text = "button12";
+            this.button12.Text = "generate report";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(269, 21);
+            this.button11.Location = new System.Drawing.Point(634, 19);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(147, 23);
             this.button11.TabIndex = 3;
-            this.button11.Text = "button11";
+            this.button11.Text = "generate report";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(188, 21);
+            this.button10.Location = new System.Drawing.Point(634, 19);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(147, 23);
             this.button10.TabIndex = 2;
-            this.button10.Text = "button10";
+            this.button10.Text = "generate report";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(107, 21);
+            this.button9.Location = new System.Drawing.Point(634, 19);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(147, 23);
             this.button9.TabIndex = 1;
-            this.button9.Text = "button9";
+            this.button9.Text = "generate report";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(26, 21);
+            this.button8.Location = new System.Drawing.Point(634, 19);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(147, 23);
             this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
+            this.button8.Text = "generate report";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // groupBox1
+            // groupBox9
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.storeKeeperTextBox);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.storeAddressTextBox);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.storeNameTextBox);
-            this.groupBox1.Controls.Add(this.deleteStoreBtn);
-            this.groupBox1.Controls.Add(this.updateStoreBtn);
-            this.groupBox1.Controls.Add(this.insertStoreBtn);
-            this.groupBox1.Location = new System.Drawing.Point(32, 270);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(417, 114);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "store info";
+            this.groupBox9.Controls.Add(this.button8);
+            this.groupBox9.Location = new System.Drawing.Point(26, 22);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(811, 63);
+            this.groupBox9.TabIndex = 5;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "stores report";
             // 
-            // name
+            // groupBox10
             // 
-            this.name.HeaderText = "name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.name.Width = 80;
+            this.groupBox10.Controls.Add(this.button9);
+            this.groupBox10.Location = new System.Drawing.Point(26, 91);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(811, 63);
+            this.groupBox10.TabIndex = 6;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "products report";
             // 
-            // address
+            // groupBox11
             // 
-            this.address.HeaderText = "address";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 130;
+            this.groupBox11.Controls.Add(this.button10);
+            this.groupBox11.Location = new System.Drawing.Point(26, 160);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(811, 63);
+            this.groupBox11.TabIndex = 6;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "products movement report";
             // 
-            // keeper
+            // groupBox12
             // 
-            this.keeper.HeaderText = "keeper";
-            this.keeper.Name = "keeper";
-            this.keeper.ReadOnly = true;
-            this.keeper.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.keeper.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.groupBox12.Controls.Add(this.button11);
+            this.groupBox12.Location = new System.Drawing.Point(26, 229);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(811, 63);
+            this.groupBox12.TabIndex = 6;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "products exceeding specific period in store report";
             // 
-            // ID
+            // groupBox13
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Prod_name
-            // 
-            this.Prod_name.HeaderText = "Name";
-            this.Prod_name.Name = "Prod_name";
-            // 
-            // store
-            // 
-            this.store.HeaderText = "store";
-            this.store.Name = "store";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.prodProductionDateComboBox);
-            this.groupBox2.Controls.Add(this.prodStoreComboBox);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.prodQuantityTextBox);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(420, 36);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(336, 296);
-            this.groupBox2.TabIndex = 34;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "product info:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.updateProductBtn);
-            this.groupBox3.Controls.Add(this.insertProductBtn);
-            this.groupBox3.Controls.Add(this.deleteProductBtn);
-            this.groupBox3.Controls.Add(this.prodExpPerTextBox);
-            this.groupBox3.Controls.Add(this.prodNameTextBox);
-            this.groupBox3.Controls.Add(this.prodIDTextBox);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(15, 33);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(305, 141);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "modify products:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.prodExpPeriodTextBox);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.availableQuantityTextBox);
-            this.groupBox4.Controls.Add(this.reqQuantityTextBox);
-            this.groupBox4.Controls.Add(this.prodNameComboBox);
-            this.groupBox4.Controls.Add(this.prodProdDateComboBox);
-            this.groupBox4.Controls.Add(this.prodIDComboBox);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.moveProductBtn);
-            this.groupBox4.Location = new System.Drawing.Point(276, 49);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(267, 270);
-            this.groupBox4.TabIndex = 60;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "move product:";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label32);
-            this.groupBox5.Controls.Add(this.supPhoneTextBox);
-            this.groupBox5.Controls.Add(this.supInsertBtn);
-            this.groupBox5.Controls.Add(this.supUpdateBtn);
-            this.groupBox5.Controls.Add(this.supIDTextBox);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.label27);
-            this.groupBox5.Controls.Add(this.supWebsiteTextBox);
-            this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Controls.Add(this.supFaxTextBox);
-            this.groupBox5.Controls.Add(this.label29);
-            this.groupBox5.Controls.Add(this.supEmailTextBox);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.supMobTextBox);
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.supNameTextBox);
-            this.groupBox5.Location = new System.Drawing.Point(436, 17);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(292, 353);
-            this.groupBox5.TabIndex = 42;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "supplier info:";
-            // 
-            // sup_ID
-            // 
-            this.sup_ID.HeaderText = "ID";
-            this.sup_ID.Name = "sup_ID";
-            this.sup_ID.Width = 50;
-            // 
-            // sup_Name
-            // 
-            this.sup_Name.HeaderText = "Name";
-            this.sup_Name.Name = "sup_Name";
-            // 
-            // sup_Phone
-            // 
-            this.sup_Phone.HeaderText = "Phone";
-            this.sup_Phone.Name = "sup_Phone";
-            // 
-            // client_ID
-            // 
-            this.client_ID.HeaderText = "ID";
-            this.client_ID.Name = "client_ID";
-            this.client_ID.Width = 50;
-            // 
-            // client_Name
-            // 
-            this.client_Name.HeaderText = "Name";
-            this.client_Name.Name = "client_Name";
-            // 
-            // client_phone
-            // 
-            this.client_phone.HeaderText = "Phone";
-            this.client_phone.Name = "client_phone";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.clientWebsiteTextBox);
-            this.groupBox6.Controls.Add(this.clientUpdateBtn);
-            this.groupBox6.Controls.Add(this.label30);
-            this.groupBox6.Controls.Add(this.clientInsertBtn);
-            this.groupBox6.Controls.Add(this.clientNameTextBox);
-            this.groupBox6.Controls.Add(this.clientPhoneTextBox);
-            this.groupBox6.Controls.Add(this.label31);
-            this.groupBox6.Controls.Add(this.clientIDTextBox);
-            this.groupBox6.Controls.Add(this.label36);
-            this.groupBox6.Controls.Add(this.label33);
-            this.groupBox6.Controls.Add(this.clientMobTextBox);
-            this.groupBox6.Controls.Add(this.clientFaxTextBox);
-            this.groupBox6.Controls.Add(this.label35);
-            this.groupBox6.Controls.Add(this.label34);
-            this.groupBox6.Controls.Add(this.clientEmailTextBox);
-            this.groupBox6.Location = new System.Drawing.Point(436, 17);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(292, 353);
-            this.groupBox6.TabIndex = 61;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "supplier info:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(50, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(33, 13);
-            this.label19.TabIndex = 61;
-            this.label19.Text = "name";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.inReqStoreName);
-            this.groupBox7.Controls.Add(this.label47);
-            this.groupBox7.Controls.Add(this.inReqProdDate);
-            this.groupBox7.Controls.Add(this.label48);
-            this.groupBox7.Controls.Add(this.inReqExpPeriod);
-            this.groupBox7.Controls.Add(this.label39);
-            this.groupBox7.Controls.Add(this.inReqQuantity);
-            this.groupBox7.Controls.Add(this.label41);
-            this.groupBox7.Controls.Add(this.inReqSupName);
-            this.groupBox7.Controls.Add(this.label42);
-            this.groupBox7.Controls.Add(this.inReqDate);
-            this.groupBox7.Controls.Add(this.inReqUpdateBtn);
-            this.groupBox7.Controls.Add(this.inReqInsertBtn);
-            this.groupBox7.Controls.Add(this.label43);
-            this.groupBox7.Controls.Add(this.inReqID);
-            this.groupBox7.Controls.Add(this.label44);
-            this.groupBox7.Controls.Add(this.inReqProdID);
-            this.groupBox7.Controls.Add(this.label45);
-            this.groupBox7.Location = new System.Drawing.Point(575, 36);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(270, 302);
-            this.groupBox7.TabIndex = 87;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "request info";
-            // 
-            // prod_IDD
-            // 
-            this.prod_IDD.HeaderText = "ID";
-            this.prod_IDD.Name = "prod_IDD";
-            this.prod_IDD.Width = 25;
-            // 
-            // prod_nameee
-            // 
-            this.prod_nameee.HeaderText = "name";
-            this.prod_nameee.Name = "prod_nameee";
-            this.prod_nameee.Width = 80;
-            // 
-            // dateee1
-            // 
-            this.dateee1.HeaderText = "production date";
-            this.dateee1.Name = "dateee1";
-            this.dateee1.Width = 80;
-            // 
-            // quantityyy
-            // 
-            this.quantityyy.HeaderText = "quantity";
-            this.quantityyy.Name = "quantityyy";
-            this.quantityyy.Width = 50;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.outReqStoreName);
-            this.groupBox8.Controls.Add(this.label40);
-            this.groupBox8.Controls.Add(this.outReqProdDate);
-            this.groupBox8.Controls.Add(this.label49);
-            this.groupBox8.Controls.Add(this.outReqExpPeriod);
-            this.groupBox8.Controls.Add(this.label50);
-            this.groupBox8.Controls.Add(this.outReqQuantity);
-            this.groupBox8.Controls.Add(this.label51);
-            this.groupBox8.Controls.Add(this.outReqClientName);
-            this.groupBox8.Controls.Add(this.label52);
-            this.groupBox8.Controls.Add(this.outReqDate);
-            this.groupBox8.Controls.Add(this.outReqUpdateBtn);
-            this.groupBox8.Controls.Add(this.outReqInsertBtn);
-            this.groupBox8.Controls.Add(this.label53);
-            this.groupBox8.Controls.Add(this.outReqID);
-            this.groupBox8.Controls.Add(this.label54);
-            this.groupBox8.Controls.Add(this.outReqProdID);
-            this.groupBox8.Controls.Add(this.label55);
-            this.groupBox8.Location = new System.Drawing.Point(575, 36);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(275, 302);
-            this.groupBox8.TabIndex = 108;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "request info";
-            // 
-            // outprodidd
-            // 
-            this.outprodidd.HeaderText = "ID";
-            this.outprodidd.Name = "outprodidd";
-            this.outprodidd.Width = 25;
-            // 
-            // outreqprodnamee
-            // 
-            this.outreqprodnamee.HeaderText = "name";
-            this.outreqprodnamee.Name = "outreqprodnamee";
-            this.outreqprodnamee.Width = 80;
-            // 
-            // prodddateoutreq
-            // 
-            this.prodddateoutreq.HeaderText = "production date";
-            this.prodddateoutreq.Name = "prodddateoutreq";
-            this.prodddateoutreq.Width = 80;
-            // 
-            // quuuantity
-            // 
-            this.quuuantity.HeaderText = "quantity";
-            this.quuuantity.Name = "quuuantity";
-            this.quuuantity.Width = 50;
+            this.groupBox13.Controls.Add(this.button12);
+            this.groupBox13.Location = new System.Drawing.Point(26, 298);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(811, 63);
+            this.groupBox13.TabIndex = 6;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "products approaching expire date report";
             // 
             // MainApp
             // 
@@ -2040,50 +2105,55 @@ namespace warehouse_storage_system
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_s)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView_p)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fromStoreGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toStoreGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inReqProdGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inRequestsGridView)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.outReqProdGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outRequestsGridView)).EndInit();
             this.tabPage6.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2279,6 +2349,11 @@ namespace warehouse_storage_system
         private System.Windows.Forms.DataGridViewTextBoxColumn outreqprodnamee;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodddateoutreq;
         private System.Windows.Forms.DataGridViewTextBoxColumn quuuantity;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox9;
     }
 }
 
